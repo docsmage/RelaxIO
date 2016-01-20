@@ -1,8 +1,123 @@
-h1 {
-	padding-top: 5%;
-	text-align: center
+.container {
+	margin: 0 auto;
+/*
+	border-style: dotted;
+	border-width: 1px;
+	border-color: black;
+*/
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	height: 60%;
+  width: 70%;
+  text-align: center;
+	padding-top: 10%;
 }
 
-p {
-	text-align: center;
+
+
+ /* Medium and small screens (640px) */
+ @media (min-width: 40rem) {
+	 html { font-size: 112%; }
+	 
+	 .column {
+		 float: left;
+		 padding-left: 1rem;
+		 padding-right: 1rem;
+	 }
+	 
+	 .column.full { width: 100%; }
+	 .column.two-thirds { width: 66.7%; }
+	 .column.half { width: 50%; }
+	 .column.third { width: 33.3%; }
+	 .column.fourth { width: 25%; }
+	 .column.flow-opposite { float: right; }
+ }
+
+ /* Large screens (1024px) */
+ @media (min-width: 64rem) {
+	 html { font-size: 120%; }
+ }
+
+#titlediv {
+/*
+	border-style: dotted;
+	border-width: 1px;
+	border-color: black;
+*/
+	display: inline-block;
+	height: 16%;
+}
+
+#subtext {
+	padding: 20px;
+}
+
+img {
+	float: left;
+	height: 75px;
+	padding-right: 5px;
+	vertical-align: middle;
+}
+
+h1 {
+	float: right;
+	vertical-align: middle;
+}
+
+#appicon {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	background: magenta;
+}
+
+.soundcircles {
+	width: 70%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+}
+
+/* creates the circles */
+.soundcircle {
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+}
+
+#whitenoise {
+	background: grey;
+}
+
+#cracklingfire {
+	background: red;
+}
+
+#rain {
+	background: blue;
+}
+
+#oceanwaves {
+	background: green;
+}
+
+#singingbowl {
+	background: brown;
+}
+
+#enginehum {
+	background: beige;
+}
+
+#softjazz {
+	background: violet;
+}
+
+#lightpiano {
+	background: yellow;
 }
