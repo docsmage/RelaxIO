@@ -17,10 +17,4 @@ var relaxIO = angular.module("relaxIO", ["ui.router"])
       templateUrl: '/templates/home.html'
 	});
 
-})
-
-relaxIO.controller('MainController', function ($scope) {
-	
-	$scope.title = "RelaxIO";
-	
 });
