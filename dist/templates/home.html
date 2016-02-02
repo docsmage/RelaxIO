@@ -12,14 +12,10 @@
 			<section class="column fourth">
 				<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}" class=".col-md-1"></div>
 				<div ng-show="hoveringOverSound"><a class="play-pause">
-					<div ng-class="{'soundpause': soundService.isPlayingSound(sound), 'soundplay': !soundService.isPlayingSound(sound)}"><h3>Play/<br>Pause</h3></div>
+					<div ng-class="{'soundpause': SoundService.isPlayingSound(sound), 'soundplay': !SoundService.isPlayingSound(sound)}">
+					</div>
 					</a></div>
 		</section>
-	</div>
-	
-			
-	<div id="masterplaypause">
-		<img src="/assets/images/playbutton.png">
 	</div>
 	
 </div>

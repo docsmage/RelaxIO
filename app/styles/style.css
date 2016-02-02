@@ -7,8 +7,6 @@
 */
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-  width: 70%;
-	height: 50%;
   text-align: center;
 }
 
@@ -74,7 +72,7 @@ h1 {
 }
 
 .soundcircles {
-	width: 75%;
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -120,12 +118,24 @@ h1 {
 	background: yellow;
 }
 
-.soundpause {
-	color: blue;
+.soundplay {
+	width: 0; 
+	height: 0; 
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 45px solid red;
+	margin-left: 50px;
+	margin-top: 25px;
 }
 
-.soundplay {
-	color: red;
+.soundpause {
+	width: 0; 
+	height: 0; 
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 45px solid blue;
+	margin-left: 50px;
+	margin-top: 25px;
 }
 
 #masterplaypause {
