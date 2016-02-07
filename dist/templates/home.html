@@ -11,11 +11,15 @@
 
 			<section class="column fourth">
 				<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}" class=".col-md-1"></div>
-				<div ng-show="hoveringOverSound"><a class="play-pause">
-					<div ng-class="{'soundpause': SoundService.isPlayingSound(sound), 'soundplay': !SoundService.isPlayingSound(sound)}">
+				<div ng-show="hoveringOverSound">
+					<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
 					</div>
-					</a></div>
+				</div>
 		</section>
+	</div>
+	
+	<div id="masterplaypause" ng-click="playPauseAll()">
+		<div ng-class="{'pause': !SoundService.allPaused(), 'play': SoundService.allPaused()}"></div>
 	</div>
 	
 </div>

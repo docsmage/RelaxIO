@@ -118,7 +118,7 @@ h1 {
 	background: yellow;
 }
 
-.soundplay {
+.play {
 	width: 0; 
 	height: 0; 
 	border-top: 40px solid transparent;
@@ -128,7 +128,7 @@ h1 {
 	margin-top: 25px;
 }
 
-.soundpause {
+.pause {
 	width: 0; 
 	height: 0; 
 	border-top: 40px solid transparent;
@@ -142,4 +142,7 @@ h1 {
 	display: block;
 	margin: 0 auto;
 	clear: both;
+	text-align: center;
+	width: 80px;
+	padding-right: 10px;
 }
