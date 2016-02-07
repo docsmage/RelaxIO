@@ -7,41 +7,19 @@
 
 	<p id="subtext">Create your own ambient sound.</p>
 	
-	<div class="soundcircles">
-		<div class="firstrow">
-			<div class="column fourth">
-				<div class="soundcircle" id="whitenoise" class=".col-md-1"></div>
-			</div>
-			<div class="column fourth">
-				<div class="soundcircle" id="cracklingfire" class=".col-md-1">
-				</div>
-			</div>
-			<div class="column fourth">
-				<div class="soundcircle" id="rain" class=".col-md-1"></div>
-			</div>
-			<div class="column fourth">
-				<div class="soundcircle" id="oceanwaves" class=".col-md-1">
-				</div>
-			</div>
-		</div>
-		
-		<div class="second">
-			<div class="column fourth">
-				<div class="soundcircle" id="singingbowl" class=".col-md-1"></div>
-			</div>
-			<div class="column fourth">
-				<div class="soundcircle" id="enginehum" class=".col-md-1">
-				</div>
-			</div>
-			<div class="column fourth">
-				<div class="soundcircle" id="softjazz" class=".col-md-1"></div>
-			</div>
-			<div class="column fourth">
-				<div class="soundcircle" id="lightpiano" class=".col-md-1">
-				</div>
-			</div>
-		</div>
-		
-	</div>
+	<div class="soundcircles" ng-repeat="sound in sounds" ng-click="playPauseSound(sound)" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
 
+			<section class="column fourth">
+				<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}" class=".col-md-1"></div>
+				<div ng-show="hoveringOverSound">
+					<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
+					</div>
+				</div>
+		</section>
+	</div>
+	
+	<div id="masterplaypause" ng-click="playPauseAll()">
+		<div ng-class="{'pause': !SoundService.allPaused(), 'play': SoundService.allPaused()}"></div>
+	</div>
+	
 </div>

@@ -7,10 +7,7 @@
 */
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-	height: 60%;
-  width: 70%;
   text-align: center;
-	padding-top: 10%;
 }
 
 
@@ -45,7 +42,7 @@
 	border-color: black;
 */
 	display: inline-block;
-	height: 16%;
+	margin-top: 10%;
 }
 
 #subtext {
@@ -77,7 +74,6 @@ h1 {
 .soundcircles {
 	width: 70%;
 	margin: 0 auto;
-	padding-bottom: 20px;
 }
 
 /* creates the circles */
@@ -87,7 +83,7 @@ h1 {
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
-	margin: 5px;
+	margin: 10px;
 }
 
 #whitenoise {
@@ -120,4 +116,33 @@ h1 {
 
 #lightpiano {
 	background: yellow;
+}
+
+.play {
+	width: 0; 
+	height: 0; 
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 45px solid red;
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
+.pause {
+	width: 0; 
+	height: 0; 
+	border-top: 40px solid transparent;
+	border-bottom: 40px solid transparent;
+	border-left: 45px solid blue;
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
+#masterplaypause {
+	display: block;
+	margin: 0 auto;
+	clear: both;
+	text-align: center;
+	width: 80px;
+	padding-right: 10px;
 }
