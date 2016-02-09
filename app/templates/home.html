@@ -18,8 +18,8 @@
 		</section>
 	</div>
 	
-	<div id="masterplaypause" ng-click="playPauseAll()">
-		<div ng-class="{'pause': !SoundService.allPaused(), 'play': SoundService.allPaused()}"></div>
+	<div id="masterplaypause" ng-click="toggleAll()">
+		<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
 	</div>
 	
 </div>
