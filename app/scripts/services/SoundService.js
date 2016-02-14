@@ -3,7 +3,8 @@ relaxIO.factory("SoundService", function () {
 	var sounds = sounds;
 	var allSoundsLoaded = {};
 	var currentlyPlaying = {};
-	var previouslyPlaying = {};	
+	var previouslyPlaying = {};
+	var defaultVolume = 60;
 	
 	return {
 		
@@ -69,6 +70,12 @@ relaxIO.factory("SoundService", function () {
 		isPlayingSound: function (sound) {
 			var soundFile = allSoundsLoaded[sound.name];
 			return soundFile !== undefined && !soundFile.isPaused();
+		},
+		
+		setVolume: function (volume) {
+			if (soundFile) {
+				soundFile.setVolume(volume);
+			}
 		}
 		
 	};

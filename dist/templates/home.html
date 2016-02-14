@@ -16,10 +16,16 @@
 					</div>
 				</div>
 		</section>
+		
 	</div>
 	
 	<div id="masterplaypause" ng-click="toggleAll()">
 		<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
 	</div>
+	
+	<div class="seek-bar" id="mastervolume">
+		<div class="fill"></div>
+		<div class="thumb"></div>
+</div>
 	
 </div>

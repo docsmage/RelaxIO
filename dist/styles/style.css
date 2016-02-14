@@ -10,8 +10,6 @@
   text-align: center;
 }
 
-
-
  /* Medium and small screens (640px) */
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
@@ -27,7 +25,7 @@
 	 .column.half { width: 50%; }
 	 .column.third { width: 33.3%; }
 	 .column.fourth { width: 25%; }
-	 .column.flow-opposite { float: right; }
+	 .column.fifth { width: 20%; }	 
  }
 
  /* Large screens (1024px) */
@@ -73,7 +71,7 @@ h1 {
 
 .soundcircles {
 	width: 70%;
-	margin: 0 auto;
+	margin: 0 auto;	
 }
 
 /* creates the circles */
@@ -83,7 +81,37 @@ h1 {
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
-	margin: 10px;
+	margin-bottom: 15px;
+}
+
+.play {
+	width: 0; 
+	height: 0; 
+	border-top: 35px solid transparent;
+	border-bottom: 35px solid transparent;
+	border-left: 40px solid red;
+	margin-left: 30px;
+	margin-top: 15px;
+}
+
+.pause {
+	width: 0; 
+	height: 0; 
+	border-top: 35px solid transparent;
+	border-bottom: 35px solid transparent;
+	border-left: 40px solid blue;
+	margin-left: 30px;
+	margin-top: 15px;
+}
+
+/* aligns master play pause button */
+#masterplaypause {
+	display: block;
+	margin: 0 auto;
+	clear: both;
+	text-align: center;
+	width: 80px;
+	padding-right: 10px;
 }
 
 #whitenoise {
@@ -118,31 +146,55 @@ h1 {
 	background: yellow;
 }
 
-.play {
-	width: 0; 
-	height: 0; 
-	border-top: 40px solid transparent;
-	border-bottom: 40px solid transparent;
-	border-left: 45px solid red;
-	margin-left: 50px;
-	margin-top: 25px;
-}
+/* Volume controls */
 
-.pause {
-	width: 0; 
-	height: 0; 
-	border-top: 40px solid transparent;
-	border-bottom: 40px solid transparent;
-	border-left: 45px solid blue;
-	margin-left: 50px;
-	margin-top: 25px;
-}
-
-#masterplaypause {
+#mastervolume {
+	padding: 15px;
 	display: block;
 	margin: 0 auto;
 	clear: both;
 	text-align: center;
-	width: 80px;
-	padding-right: 10px;
+	width: 20%;
+	margin-top: 20px;
 }
+
+.seek-bar {
+	height: 0.25rem;
+	background: #E0E0E0;
+	border-radius: 1px;
+	position: relative;
+	cursor: pointer;
+	padding-top: 20px;
+ }
+ 
+ .seek-bar .fill {
+	 background: black;
+	 width: 100%;
+	 height: 0.25rem;
+	 border-radius: 1px;
+ }
+ 
+ .seek-bar .thumb {
+	 position: absolute;
+	 height: 0.5rem;
+	 width: 0.5rem;
+	 background: black;
+	 left: 50%;
+	 top: 50%;
+	 /* #1 */
+	 margin-left: -0.25rem;
+	 margin-top: -0.25rem;
+	 border-radius: 50%;
+	 cursor: pointer;
+	 transition: width 100ms ease-in-out,
+		 height 100ms ease-in-out,
+		 margin-top 100ms ease-in-out,
+		 margin-left 100ms ease-in-out;
+ }
+ 
+ .seek-bar:hover .thumb {
+	 width: 1.1rem;
+	 height: 1.1rem;
+	 margin-top: -0.5rem;
+	 margin-left: -0.5rem;
+ }
