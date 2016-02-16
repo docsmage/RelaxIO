@@ -1,16 +1,20 @@
+/* container for all content of page */
 .container {
 	margin: 0 auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+	
 /*
 	border-style: dotted;
 	border-width: 1px;
 	border-color: black;
 */
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
-  text-align: center;
+	
 }
 
- /* Medium and small screens (640px) */
+ /* Grid system for sounds - Medium and small screens (640px) */
+
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
 	 
@@ -18,17 +22,30 @@
 		 float: left;
 		 padding-left: 1rem;
 		 padding-right: 1rem;
+		 padding-top: 1rem;
+		 
+/*
+		 border-style: dotted;
+		 border-width: 3px;
+		 border-color: black;
+*/
 	 }
 	 
 	 .column.full { width: 100%; }
 	 .column.two-thirds { width: 66.7%; }
 	 .column.half { width: 50%; }
 	 .column.third { width: 33.3%; }
-	 .column.fourth { width: 25%; }
+	 .column.fourth { width: 25%;		 
+/*
+	border-style: dotted;
+	border-width: 1px;
+	border-color: red; 
+*/
+	 }
 	 .column.fifth { width: 20%; }	 
  }
 
- /* Large screens (1024px) */
+  Large screens (1024px) 
  @media (min-width: 64rem) {
 	 html { font-size: 120%; }
  }
@@ -37,7 +54,7 @@
 /*
 	border-style: dotted;
 	border-width: 1px;
-	border-color: black;
+	border-color: blue;
 */
 	display: inline-block;
 	margin-top: 10%;
@@ -45,6 +62,11 @@
 
 #subtext {
 	padding: 20px;
+/*
+	border-style: dotted;
+	border-width: 1px;
+	border-color: green;
+*/
 }
 
 img {
@@ -52,6 +74,9 @@ img {
 	height: 75px;
 	padding-right: 5px;
 	vertical-align: middle;
+	border-style: dotted;
+	border-width: 1px;
+	border-color: pink;
 }
 
 h1 {
@@ -92,6 +117,7 @@ h1 {
 	border-left: 40px solid red;
 	margin-left: 30px;
 	margin-top: 15px;
+	margin-bottom: 30px;
 }
 
 .pause {
@@ -102,6 +128,33 @@ h1 {
 	border-left: 40px solid blue;
 	margin-left: 30px;
 	margin-top: 15px;
+	margin-bottom: 30px;	
+}
+
+/*Background colors for individual sounds*/
+#whitenoise {
+	background: #CCCCCC;
+}
+#cracklingfire {
+	background: red;
+}
+#rain {
+	background: blue;
+}
+#oceanwaves {
+	background: green;
+}
+#singingbowl {
+	background: #333333;
+}
+#thunderstorm {
+	background: purple;
+}
+#enginehum {
+	background: brown;
+}
+#om {
+	background: #f0dba5;
 }
 
 /* aligns master play pause button */
@@ -110,61 +163,34 @@ h1 {
 	margin: 0 auto;
 	clear: both;
 	text-align: center;
-	width: 80px;
-	padding-right: 10px;
-}
-
-#whitenoise {
-	background: grey;
-}
-
-#cracklingfire {
-	background: red;
-}
-
-#rain {
-	background: blue;
-}
-
-#oceanwaves {
-	background: green;
-}
-
-#singingbowl {
-	background: brown;
-}
-
-#enginehum {
-	background: beige;
-}
-
-#softjazz {
-	background: violet;
-}
-
-#lightpiano {
-	background: yellow;
+	width: 100px;
+	height: 85px;
+/*
+	border-style: dotted;
+	border-width: 1px;
+	border-color: violet;	
+*/
 }
 
 /* Volume controls */
-
 #mastervolume {
-	padding: 15px;
 	display: block;
 	margin: 0 auto;
 	clear: both;
 	text-align: center;
-	width: 20%;
-	margin-top: 20px;
+	width: 15%;
+/*
+	border-style: dotted;
+	border-width: 1px;
+	border-color: violet;	
+*/
 }
 
 .seek-bar {
 	height: 0.25rem;
-	background: #E0E0E0;
 	border-radius: 1px;
 	position: relative;
 	cursor: pointer;
-	padding-top: 20px;
  }
  
  .seek-bar .fill {

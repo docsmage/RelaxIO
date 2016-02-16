@@ -76,6 +76,10 @@ relaxIO.factory("SoundService", function () {
 			if (soundFile) {
 				soundFile.setVolume(volume);
 			}
+		},
+		
+		updateSeekBar: function () {
+			
 		}
 		
 	};
