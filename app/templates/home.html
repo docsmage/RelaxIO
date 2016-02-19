@@ -14,7 +14,16 @@
 				<div ng-show="hoveringOverSound">
 					<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
 					</div>
+					
 				</div>
+				
+				<!-- Individual volumes -->
+				<slider data-sound="sound.name"></slider>
+				<div class="seek-bar" id="volume">
+					<div class="fill"></div>
+					<div class="thumb"></div>
+				</div>				
+				
 		</section>
 		
 	</div>
@@ -22,8 +31,10 @@
 	<div id="masterplaypause" ng-click="toggleAll()">
 		<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
 	</div>
+	
 <!--	Master volume-->
-	<div class="seek-bar" id="mastervolume">
+	<slider data-sound="all"></slider>
+	<div class="seek-bar" id="mastervolume" >
 		<div class="fill"></div>
 		<div class="thumb"></div>
 </div>

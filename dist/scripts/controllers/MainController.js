@@ -17,8 +17,10 @@ relaxIO.controller('MainController', function ($scope, SoundService) {
 	
 	$scope.isAnyPlaying = SoundService.isAnyPlaying;
 	
-	$scope.setVolume = function (volume) {
+	$scope.masterSetVolume = function (volume) {
 		SoundService.setVolume(volume);
 	};
+	
+	SoundService.init();
 	
 });
