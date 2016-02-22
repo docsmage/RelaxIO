@@ -22,7 +22,7 @@ relaxIO.factory("SoundService", function () {
  };
 	
 	var SoundService = {
-		
+
 		// load sounds
 		loadSound: function (sound) {
 			if (!allSoundsLoaded[sound.name]) {
@@ -37,7 +37,7 @@ relaxIO.factory("SoundService", function () {
 		
 		playOrPause: function (sound) {		
 			this.loadSound(sound);
-			var souåndFile = allSoundsLoaded[sound.name];
+			var soundFile = allSoundsLoaded[sound.name];
 			if (soundFile.isPaused()) {
 				currentlyPlaying[sound.name] = true;
 			} else {
