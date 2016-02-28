@@ -7,19 +7,28 @@
 
 	<p id="subtext">Create your own ambient sound.</p>
 	
-	<div class="soundcircles" ng-repeat="sound in sounds" ng-click="playPauseSound(sound)" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
+	<div class="soundcircles" ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
 
 			<section class="column fourth">
-				<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}" class=".col-md-1"></div>
-				<div ng-show="hoveringOverSound">
+				<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}"></div>
+				<div ng-show="hoveringOverSound" ng-click="playPauseSound(sound)">
 					<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
 					</div>
+					
 				</div>
+				
+				<!-- Individual volumes -->
+				<slider data-sound="{{sound.name}}" id="individualvolume"></slider>
+				
 		</section>
+		
 	</div>
 	
-	<div id="masterplaypause" ng-click="playPauseAll()">
-		<div ng-class="{'pause': !SoundService.allPaused(), 'play': SoundService.allPaused()}"></div>
+	<div id="masterplaypause" ng-click="toggleAll()">
+		<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
 	</div>
+	
+<!--	Master volume-->
+	<slider data-sound="all" id="mastervolume"></slider>
 	
 </div>

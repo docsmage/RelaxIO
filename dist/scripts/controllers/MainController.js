@@ -12,7 +12,9 @@ relaxIO.controller('MainController', function ($scope, SoundService) {
 		SoundService.playOrPause(sound);
 	};
 
-	$scope.playPauseAll = function (masterPausePlay) { SoundService.playPauseAll(masterPausePlay);
+	$scope.toggleAll = function () { SoundService.toggleAll();
 	};
+	
+	$scope.isAnyPlaying = SoundService.isAnyPlaying;
 	
 });
