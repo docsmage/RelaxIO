@@ -16,5 +16,11 @@ var relaxIO = angular.module("relaxIO", ["ui.router"])
       controller: 'MainController',
       templateUrl: '/templates/home.html'
 	});
+	
+	$stateProvider.state('about', {
+		url: '/about',
+		controller: 'MainController',
+		templateUrl: '/templates/about.html'
+	});
 
 });

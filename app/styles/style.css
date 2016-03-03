@@ -13,6 +13,12 @@
 	
 }
 
+.navbar {
+	background-color: #CCC;
+	padding: 20px;
+	text-align: center;
+}
+
  /* Grid system for sounds - Medium and small screens (640px) */
 
  @media (min-width: 40rem) {
