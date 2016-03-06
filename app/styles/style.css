@@ -61,8 +61,7 @@
 /* Holds individual sound img, play/pause & volume */
 
 #soundandvolume {
-/*	background: #EEE;*/
-	border-radius: 20px;
+	height: 140px;
 }
 
 /* Individual sound circles */
@@ -136,7 +135,7 @@
 /*	background: #EEE;*/
 	border-radius: 25px;
 	width: 25%;
-	padding-top: 20px;
+	padding-top: 5px;
 	padding-bottom: 5px;
 }
 
@@ -158,7 +157,7 @@
 	height: 0.20rem;
 	position: relative;
 	cursor: pointer;
-	background-color: #555;
+	background-color: #434343;
  }
  
  .seek-bar .fill {
@@ -169,6 +168,7 @@
  }
  
  .seek-bar .thumb {
+	 background-color: #434343;	 
 	 position: absolute;
 	 height: 0.5rem;
 	 width: 0.5rem;
@@ -187,6 +187,7 @@
  }
  
  .seek-bar:hover .thumb {
+	 background-color: #434343;	 
 	 width: 1.1rem;
 	 height: 1.1rem;
 	 margin-top: -0.5rem;

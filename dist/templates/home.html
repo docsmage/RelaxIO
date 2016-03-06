@@ -1,30 +1,24 @@
-<div>
-	
-	<div ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
-
-			<section class="column fourth" id="soundandvolume">
-				<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}"></div>
-				<div ng-show="hoveringOverSound" ng-click="playPauseSound(sound)">
-					<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
-					</div>
-					
-				</div>
-				
-				<!-- Individual volumes -->
-				<slider data-sound="{{sound.name}}" id="volume"></slider>
-				
-		</section>
+<div ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
+	<section class="column fourth" id="soundandvolume">
+		<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}"></div>
+		<div ng-show="hoveringOverSound" ng-click="playPauseSound(sound)">
+			<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
+			</div>
+		</div>
 		
+		<!-- Individual volumes -->
+		<div ng-show="hoveringOverSound">
+			<slider data-sound="{{sound.name}}" id="volume"></slider>
+		</div>
+	</section>
+
+</div>
+
+<section id="masterdiv">
+	<div id="masterplaypause" ng-click="toggleAll()">
+		<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
 	</div>
 	
-	<section id="masterdiv">
-		<div id="masterplaypause" ng-click="toggleAll()">
-			<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
-		</div>
-
-	
 	<!--	Master volume-->
-		<slider data-sound="all" id="volume"></slider>
-	</section>
-	
-</div>
+	<slider data-sound="all" id="volume"></slider>
+</section>
