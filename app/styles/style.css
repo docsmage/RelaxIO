@@ -33,7 +33,7 @@
 	vertical-align: middle;
 }
 
- /* Grid system for sounds - Medium and small screens (640px) */
+ /* Grid system for sounds */
 
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
@@ -58,10 +58,14 @@
 	 html { font-size: 120%; }
  }
 
+/* Holds individual sound img, play/pause & volume */
+
 #soundandvolume {
 /*	background: #EEE;*/
 	border-radius: 20px;
 }
+
+/* Individual sound circles */
 
 .soundcircle {
 	-moz-border-radius: 50%;
@@ -71,6 +75,8 @@
 	height: 100px;
 	margin: 0 auto;
 }
+
+/* Play & pause buttons */
 
 .play {
 	height: 100px;
@@ -87,7 +93,7 @@
 	
 }
 
-/*Backgrounds for individual sounds*/
+/* Individual sound background images */
 
 #whitenoise {
 	background-image: url("/assets/images/White-Noise-Icon.png");
@@ -121,6 +127,8 @@
 	background-image: url("/assets/images/Om-Icon.png");	
 }
 
+/* Master div - holds master play/pause & volume */
+
 #masterdiv {
 	margin: 0 auto;
 	clear: both;
@@ -132,7 +140,7 @@
 	padding-bottom: 5px;
 }
 
-/* Volume Controls */
+/* Volume */
 
 #volume {
 	display: block;
@@ -144,13 +152,13 @@
 	margin-bottom: 15px;	
 }
 
-/* Seek bar */
+/* Seek Bar */
 
 .seek-bar {
 	height: 0.20rem;
 	position: relative;
 	cursor: pointer;
-	background-color: #888;
+	background-color: #555;
  }
  
  .seek-bar .fill {
