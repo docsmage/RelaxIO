@@ -1,5 +1,9 @@
-/* container for all content of page */
+#background {
+	background-image: url("/assets/images/Background/blur_bg_1.jpg");
+}
+
 .container {
+	padding-top: 50px;
 	margin: 0 auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
@@ -10,13 +14,23 @@
 	border-width: 1px;
 	border-color: black;
 */
-	
 }
 
 .navbar {
-	background-color: #CCC;
+	background-color: #FFF;
+	opacity: 0.5;	
 	padding: 20px;
 	text-align: center;
+	margin: 0 auto;
+	width: 60%;
+	border-radius: 20px;
+}
+
+.titleimg {
+	float: left;
+	padding-left: 25px;
+	padding-right: 25px;
+	vertical-align: middle;
 }
 
  /* Grid system for sounds - Medium and small screens (640px) */
@@ -44,174 +58,105 @@
 	 html { font-size: 120%; }
  }
 
-#titlediv {
-	display: inline-block;
-	margin-top: 10%;
+#soundandvolume {
+/*	background: #EEE;*/
+	border-radius: 20px;
 }
 
-#subtext {
-	padding: 20px;
-}
-
-img {
-	float: left;
-	height: 75px;
-	padding-right: 5px;
-	vertical-align: middle;
-}
-
-h1 {
-	float: right;
-	vertical-align: middle;
-}
-
-#appicon {
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	margin: 5px;
-	background: magenta;
-}
-
-.soundcircles {
-	width: 70%;
-	margin: 0 auto;
-}
-
-/* creates the circles */
 .soundcircle {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
-	margin-bottom: 15px;
+	margin: 0 auto;
 }
 
 .play {
-	width: 0; 
-	height: 0; 
-	border-top: 35px solid transparent;
-	border-bottom: 35px solid transparent;
-	border-left: 40px solid red;
-	margin-left: 30px;
-	margin-top: 15px;
-	margin-bottom: 30px;
-	
-/*
-	border-style: dotted;
-	border-width: 1px;
-	border-color: green;
-*/
-
+	height: 100px;
+	width: 100px;
+	background-image: url("/assets/images/Play-Icon.png");
+	margin: 0 auto;	
 }
 
 .pause {
-	width: 0; 
-	height: 0; 
-	border-top: 35px solid transparent;
-	border-bottom: 35px solid transparent;
-	border-left: 40px solid blue;
-	margin-left: 30px;
-	margin-top: 15px;
-	margin-bottom: 30px;
-	
-/*
-	border-style: dotted;
-	border-width: 1px;
-	border-color: red;
-*/
-	
-}
-
-/*Background colors for individual sounds*/
-#whitenoise {
-	background: #CCCCCC;
-}
-#cracklingfire {
-	background: red;
-}
-#rain {
-	background: blue;
-}
-#oceanwaves {
-	background: green;
-}
-#singingbowl {
-	background: #333333;
-}
-#thunderstorm {
-	background: purple;
-}
-#enginehum {
-	background: brown;
-}
-#om {
-	background: #f0dba5;
-}
-
-/* aligns master play pause button */
-#masterplaypause {
-	display: block;
-	margin: 0 auto;
-	clear: both;
-	text-align: center;
-	width: 100px;
 	height: 100px;
-	padding-top: 10px;
+	width: 100px;
+	background-image: url("/assets/images/Pause-Icon.png");
+	margin: 0 auto;	
 	
-/*
-	border-style: dotted;
-	border-width: 1px;
-	border-color: violet;	
-*/
 }
 
-/* Volume controls */
-#mastervolume {
+/*Backgrounds for individual sounds*/
+
+#whitenoise {
+	background-image: url("/assets/images/White-Noise-Icon.png");
+}
+
+#cracklingfire {
+	background-image: url("/assets/images/Crackling-Fire-Icon.png");
+}
+
+#rain {
+	background-image: url("/assets/images/Rain-Icon.png");
+}
+
+#oceanwaves {
+	background-image: url("/assets/images/Ocean-Waves-Icon.png");
+}
+
+#singingbowl {
+	background-image: url("/assets/images/Singing-Bowl-Icon.png");
+}
+
+#thunderstorm {
+	background-image: url("/assets/images/Thunderstorm-Icon.png");	
+}
+
+#enginehum {
+	background-image: url("/assets/images/Fan-Icon.png");	
+}
+
+#om {
+	background-image: url("/assets/images/Om-Icon.png");	
+}
+
+#masterdiv {
+	margin: 0 auto;
+	clear: both;
+	display: block;
+/*	background: #EEE;*/
+	border-radius: 25px;
+	width: 25%;
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+
+/* Volume Controls */
+
+#volume {
 	display: block;
 	margin: 0 auto;
 	clear: both;
 	text-align: center;
-	width: 15%;
-	margin-top: 5px;
-	
-/*
-	border-style: solid;
-	border-width: 1px;
-	border-color: violet;
-*/
+	width:  100px;
+	margin-top: 15px;
+	margin-bottom: 15px;	
 }
 
-#individualvolume {
-	display: block;
-	margin: 0 auto;
-	clear: both;
-	text-align: center;
-	
-/*
-	border-style: solid;
-	border-width: 1px;
-	border-color: violet;	
-*/
-}
+/* Seek bar */
 
 .seek-bar {
-	height: 0.25rem;
-	border-radius: 1px;
+	height: 0.20rem;
 	position: relative;
 	cursor: pointer;
-	background-color: grey;
-	
+	background-color: #888;
  }
  
  .seek-bar .fill {
-	 background: black;
+	 background: #333;
 	 width: 100%;
 	 height: 0.25rem;
-	 border-radius: 1px;
 	 
  }
  
