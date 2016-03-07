@@ -11,14 +11,17 @@
 			<slider data-sound="{{sound.name}}" id="volume"></slider>
 		</div>
 	</section>
-
+	
 </div>
 
-<section id="masterdiv">
+<!--Master div-->
+	<div id="masterdiv" >
+<!-- Master play/pause button -->	
 	<div id="masterplaypause" ng-click="toggleAll()">
 		<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
 	</div>
-	
-	<!--	Master volume-->
-	<slider data-sound="all" id="volume"></slider>
-</section>
+		
+		<!--	Master volume-->
+		<slider data-sound="all" id="volume"></slider>
+
+</div>

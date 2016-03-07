@@ -26,11 +26,35 @@
 	border-radius: 20px;
 }
 
-.titleimg {
+/* Holds master play/pause & volume */
+
+#masterdiv {
+
+/*	Comment out these styles below when moving into nav bar*/
+	display: block;
+	margin: 0 auto;
+	clear: both;
+	text-align: center;
+	width: 25%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	
+	/*Uncomment these styles when moving into nav bar	*/
+/*
 	float: left;
-	padding-left: 25px;
-	padding-right: 25px;
-	vertical-align: middle;
+	padding-left: 30px;
+	padding-top: 10px;
+*/
+
+}
+
+.titleimg {
+/*	float: left;*/
+/*	padding-left: 25px;*/
+/*	padding-right: 25px;*/
+/*	float: right;*/
+/*	vertical-align: middle;*/
+	height: 120px;
 }
 
  /* Grid system for sounds */
@@ -126,18 +150,6 @@
 	background-image: url("/assets/images/Om-Icon.png");	
 }
 
-/* Master div - holds master play/pause & volume */
-
-#masterdiv {
-	margin: 0 auto;
-	clear: both;
-	display: block;
-/*	background: #EEE;*/
-	width: 25%;
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
 /* Volume */
 
 #volume {
@@ -147,7 +159,7 @@
 	text-align: center;
 	width:  100px;
 	margin-top: 15px;
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 }
 
 /* Seek Bar */
