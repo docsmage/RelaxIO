@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RelaxIO</title>
+    <title>Relaxio</title>
 	
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/style.css">
@@ -30,17 +30,30 @@
 	<script src="/scripts/directives/slider.js"></script>
 	
 </head>
-<body class="container">
+<body class="container" id="background">
 	
 	<nav class="navbar">
-		<a ui-sref="home">Home</a>
+	
+<!--
+		<span id="masterdiv">
+			<div id="masterplaypause" ng-click="toggleAll()">
+				<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
+			</div>
+			
+			<slider data-sound="all" id="volume"></slider>
+		</span>
+-->
+		
+		<!-- Title img -->
+		<a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="titleimg"></a><br>
+		
+		<!-- Navbar links -->
 		<a ui-sref="about">About</a>
 		<a ui-sref="saved">Saved</a>
 	</nav>
 	
-  <ui-view>
-  <!-- Where templates come to life! -->
-  </ui-view>
-</body>
+	<ui-view></ui-view>
+
+	</body>
 	
 </html>

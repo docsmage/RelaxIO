@@ -1,34 +1,27 @@
-<div>
-	
-	<section id="titlediv">
-		<img src="http://cdn.mysitemyway.com/icons-watermarks/simple-black/ocha-inv/ocha-inv_telecommunications-radio-inv/ocha-inv_telecommunications-radio-inv_simple-black_128x128.png">
-		<h1>{{ title }}</h1>
-	</section>
-
-	<p id="subtext">Create your own ambient sound.</p>
-	
-	<div class="soundcircles" ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
-
-			<section class="column fourth">
-				<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}"></div>
-				<div ng-show="hoveringOverSound" ng-click="playPauseSound(sound)">
-					<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
-					</div>
-					
-				</div>
-				
-				<!-- Individual volumes -->
-				<slider data-sound="{{sound.name}}" id="individualvolume"></slider>
-				
-		</section>
+<div ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
+	<section class="column fourth" id="soundandvolume">
+		<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}"></div>
+		<div ng-show="hoveringOverSound" ng-click="playPauseSound(sound)">
+			<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
+			</div>
+		</div>
 		
-	</div>
+		<!-- Individual volumes -->
+		<div ng-show="hoveringOverSound">
+			<slider data-sound="{{sound.name}}" id="volume"></slider>
+		</div>
+	</section>
 	
+</div>
+
+<!--Master div-->
+	<div id="masterdiv" >
+<!-- Master play/pause button -->	
 	<div id="masterplaypause" ng-click="toggleAll()">
 		<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
 	</div>
-	
-<!--	Master volume-->
-	<slider data-sound="all" id="mastervolume"></slider>
-	
+		
+		<!--	Master volume-->
+		<slider data-sound="all" id="volume"></slider>
+
 </div>
