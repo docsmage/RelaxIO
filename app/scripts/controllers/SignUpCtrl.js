@@ -2,7 +2,6 @@ relaxIO.controller('SignUpCtrl', ['$scope', '$cookies', 'Signup',  function ($sc
 	
 	$scope.signUp = function (email, password) {
 		Signup.signUp(email, password, function (user) {
-			debugger;
 		});
 	}
 	

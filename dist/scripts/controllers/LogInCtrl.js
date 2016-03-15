@@ -1,7 +1,8 @@
-relaxIO.controller('logInCtrl', ['$scope', '$cookies',  function ($scope, $cookies) {
+relaxIO.controller('LogInCtrl', ['$scope', '$cookies', 'Login', function ($scope, $cookies, Login) {
 	
 	$scope.logIn = function (email, password) {
-		$cookies.relaxioUser = email;
+		Login.logIn(email, password, function (user) {
+		});
 	}
 	
 }]);
