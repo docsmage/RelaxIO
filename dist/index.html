@@ -28,11 +28,15 @@
 	<script src="/scripts/controllers/MainController.js"></script>
 	<script src="/scripts/controllers/SignUpCtrl.js"></script>
 	<script src="/scripts/controllers/LogInCtrl.js"></script>
+	<script src="/scripts/controllers/NavCtrl.js"></script>	
 	
 	<!-- services -->
 	<script src="/scripts/services/SoundService.js"></script>
 	<script src="/scripts/services/Signup.js"></script>
 	<script src="/scripts/services/Login.js"></script>	
+	<script src="/scripts/services/LogOut.js"></script>
+	<script src="/scripts/services/SaveMix.js"></script>
+	<script src="/scripts/services/Session.js"></script>	
 	
 	<!-- directives -->
 	<script src="/scripts/directives/slider.js"></script>
@@ -50,7 +54,7 @@
 </head>
 <body class="container" id="background">
 	
-	<nav class="navbar">
+	<nav class="navbar" ng-controller="NavCtrl">
 	
 <!--
 		<span id="masterdiv">
@@ -69,7 +73,9 @@
 		<a ui-sref="about">About</a>
 		<a ui-sref="saved">Saved</a>
 		<button type="button"><a ui-sref="signup">Sign Up</a></button>
-		<button type="button"><a ui-sref="login">Login</a></button>
+		<button type="button" ng-hide="isLoggedIn()"><a ui-sref="login">Login</a></button>
+		<button type="button"  ng-click="saveMix()">Save</button>
+		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
 	</nav>
 	
 	<ui-view></ui-view>

@@ -2,6 +2,8 @@ relaxIO.factory('Signup', ['$firebaseArray', function($firebaseArray){
 	
 	// TODO: Remove window.ref
 	var ref = window.ref = new Firebase("https://relaxio.firebaseio.com");
+	
+	var isNewUser = true;
 
 	return {
 		signUp: function (email, password, callback) {
@@ -17,6 +19,6 @@ relaxIO.factory('Signup', ['$firebaseArray', function($firebaseArray){
 				}
 			});
 		}
-
+	
 	}
 }]);

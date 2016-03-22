@@ -1,4 +1,4 @@
-relaxIO.factory('Login', ['$firebaseArray', function($firebaseArray){
+relaxIO.factory('Login', ['$firebaseArray', 'Session', function($firebaseArray, Session){
 	
 	// TODO: Remove window.ref
 	var ref = window.ref = new Firebase("https://relaxio.firebaseio.com");
@@ -13,6 +13,9 @@ relaxIO.factory('Login', ['$firebaseArray', function($firebaseArray){
 					console.log("Login Failed!", error);
 				} else {
 					console.log("Authenticated successfully with payload:", authData);
+				
+					Session.setSessionInfo(authData);
+					callback();
 				}
 			})
 		}

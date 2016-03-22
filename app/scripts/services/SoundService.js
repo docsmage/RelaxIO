@@ -7,6 +7,18 @@ relaxIO.factory("SoundService", function () {
 	var defaultVolume = 60;
 
 	var SoundService = {
+		getCurrentlyPlaying: function () {
+			var soundData = [];
+			
+			for (var sound in currentlyPlaying) {
+				soundData.push({
+					name: sound,
+					volume: allSoundsLoaded[sound].getVolume()
+				})
+			}
+			
+			return soundData;
+		},
 
 		// load sounds
 		loadSound: function (sound) {
