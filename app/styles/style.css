@@ -7,7 +7,7 @@
 	margin: 0 auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-  text-align: center;
+  text-align: center;	
 	
 /*
 	border-style: dotted;
@@ -16,45 +16,43 @@
 */
 }
 
+/*OVERALL NAVBAR*/
 .navbar {
 	background-color: #FFF;
 	opacity: 0.5;	
-	padding: 20px;
-	text-align: center;
 	margin: 0 auto;
-	width: 60%;
 	border-radius: 20px;
 }
 
-/* Holds master play/pause & volume */
-
-#masterdiv {
-
-/*	Comment out these styles below when moving into nav bar*/
-	display: block;
-	margin: 0 auto;
-	clear: both;
-	text-align: center;
-	width: 25%;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	
-	/*Uncomment these styles when moving into nav bar	*/
-/*
-	float: left;
-	padding-left: 30px;
-	padding-top: 10px;
-*/
-
+/*LEFT - holds master play/pause & save*/
+#playpausesave {
+	margin-top: 10px;
 }
 
+#masterplaypause {
+	float: left;
+}
+
+#savebutton {
+	float: left;
+}
+
+#mastervolume {
+	margin-top: 8px;
+	margin-left: 50px;
+	margin-right: -50px;
+}
+
+/*CENTER - holds title img*/
 .titleimg {
-/*	float: left;*/
-/*	padding-left: 25px;*/
-/*	padding-right: 25px;*/
-/*	float: right;*/
-/*	vertical-align: middle;*/
-	height: 120px;
+	vertical-align: middle;
+	height: 120px;	
+}
+
+/*RIGHT - holds about and save buttons*/
+#aboutsaved {
+	float: right;
+	padding: 36px;
 }
 
  /* Grid system for sounds */
@@ -152,7 +150,7 @@
 
 /* Volume */
 
-#volume {
+.individualvolume {
 	display: block;
 	margin: 0 auto;
 	clear: both;
@@ -161,6 +159,18 @@
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
+
+#masterdiv {
+/*	Remove when moving into nav bar*/
+	display: block;
+	margin: 0 auto;
+	clear: both;
+	text-align: center;
+	width: 25%;
+	padding-top: 5px;
+	padding-bottom: 5px;		
+}
+
 
 /* Seek Bar */
 
