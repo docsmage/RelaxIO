@@ -7,6 +7,7 @@
 	
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/style.css">
+	<link rel="stylesheet" href="/styles/nav.css">	
 	<!--  Normalize -->
 	<link rel="stylesheet" href="/styles/normalize.css">
 	<!-- Bootstrap -->
@@ -57,6 +58,7 @@
 	<nav class="navbartop" ng-controller="NavCtrl">
 			
 		<span id="masterplaypause">
+			
 			<!-- Top Play/Pause -->			
 			<span ng-click="toggleAll()">
 				<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
@@ -74,10 +76,24 @@
 		
 		<!-- Navbar links -->
 		<span id="savedlogin">
-			<button type="button"><a ui-sref="saved">Saved</a></button><br>
+			
+<!--			<div class="savedropdown">-->
+				<button onclick="myFunction()" type="button" class="saved">Saved</button><br>
+<!--				<div id="navDropdown" class="savedropdown-content">-->
+<!--
+					<a href="#">Mix #1</a>
+					<a href="#">Mix #2</a>
+					<a href="#">Mix #3</a>
+-->
+<!--				</div>-->
+<!--			</div>-->
+			
 <!--		<button type="button"><a ui-sref="signup">Sign Up</a></button>-->
+			
 		<button type="button" ng-hide="isLoggedIn()"><a ui-sref="login">Login</a></button>
+			
 		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
+			
 	</span>
 	</nav>
 	

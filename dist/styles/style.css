@@ -1,7 +1,9 @@
+/*Background image for all pages*/
 #background {
 	background-image: url("/assets/images/Background/blur_bg_1.jpg");
 }
 
+/*Container for all pages*/
 .container {
 	padding-top: 50px;
 	margin: 0 auto;
@@ -16,41 +18,7 @@
 */
 }
 
-.navbartop {
-	background-color: #FFF;
-	opacity: 0.5;	
-	margin: 0 auto;
-	border-radius: 20px;
-	padding: 10px;
-}
-
-#masterplaypause {
-	float: left;
-}
-
-#savebutton {
-	float: left;
-}
-
-#mastervolume {
-	margin-top: 8px;
-	margin-left: 50px;
-	margin-right: -50px;
-}
-
-/*CENTER - holds title img*/
-.titleimg {
-	vertical-align: middle;
-	height: 120px;	
-}
-
-/*RIGHT - holds about and save buttons*/
-#savedlogin {
-	float: right;
-	padding: 36px;
-}
-
- /* Grid system for sounds */
+/* Grid system for sounds */
 
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
@@ -76,6 +44,12 @@
  }
 
 /* Holds individual sound img, play/pause & volume */
+
+.soundcircles {
+	display: block;
+	height: 40%;
+	
+}
 
 #soundandvolume {
 	height: 140px;
@@ -155,18 +129,6 @@
 	margin-bottom: 15px;
 }
 
-#masterdiv {
-/*	Remove when moving into nav bar*/
-	display: block;
-	margin: 0 auto;
-	clear: both;
-	text-align: center;
-	width: 25%;
-	padding-top: 5px;
-	padding-bottom: 5px;		
-}
-
-
 /* Seek Bar */
 
 .seek-bar {
@@ -210,12 +172,45 @@
 	 margin-left: -0.5rem;
  }
 
-.navbarbottom {
-	width: 100%;
-	background-color: #000;
-	opacity: 0.5;	
-/*	margin: 0 auto;*/
-	border-radius: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+/*Saved menu functionality*/
+
+/* The container <div> - needed to position the dropdown content */
+.savedropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/*Dropdown content hidden by default*/
+.savedropdown-content {
+	display: none;
+	position: absolute;
+	background-color: grey;
+	min-width: 160px;
+}
+
+/*Links inside the dropdown*/
+.savedropdown-content a {
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.savedropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/*Dropdown button*/
+.saved {
+	color: grey;
+	cursor: pointer;		
+}
+
+/* Dropdown button on hover & focus */
+.saved:hover, .saved:focus {
+	background-color: blue;
+}
+
+#navDropdown {
+	
 }

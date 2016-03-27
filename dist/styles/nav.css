@@ -1,0 +1,46 @@
+.navbartop {
+	background-color: #FFF;
+	opacity: 0.5;	
+	margin: 0 auto;
+	border-radius: 20px;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+#masterplaypause {
+	float: left;
+}
+
+#savebutton {
+	float: left;
+}
+
+#mastervolume {
+	margin-top: 8px;
+	margin-left: 50px;
+	margin-right: -50px;
+}
+
+/*CENTER - holds title img*/
+.titleimg {
+	vertical-align: middle;
+	height: 120px;	
+}
+
+/*RIGHT - holds about and save buttons*/
+#savedlogin {
+	float: right;
+	padding: 36px;
+}
+ 
+/*Bottom navbar*/
+
+.navbarbottom {
+	background-color: #000;
+	opacity: 0.5;	
+	margin: 0 auto;
+	border-radius: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 30px;
+}
