@@ -54,10 +54,8 @@
 </head>
 <body class="container" id="background">
 	
-	<nav class="navbar" ng-controller="NavCtrl">
-	
-		<span id="playpausesave">
-		
+	<nav class="navbartop" ng-controller="NavCtrl">
+			
 		<span id="masterplaypause">
 			<!-- Top Play/Pause -->			
 			<span ng-click="toggleAll()">
@@ -70,24 +68,24 @@
 		
 		<!-- Save Button -->
 			<img src="/assets/images/Save-Icon.png" alt="Save Button" ng-click="saveMix()" id="savebutton">
-			
-		</span>	
 		
 		<!-- Title img -->
 		<span id="titleimage"><a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="titleimg"></a></span>
 		
 		<!-- Navbar links -->
-		<span id="aboutsaved">
-<!--		<a ui-sref="about">About</a>-->
-		<a ui-sref="saved">Saved</a><br>
+		<span id="savedlogin">
+			<button type="button"><a ui-sref="saved">Saved</a></button><br>
 <!--		<button type="button"><a ui-sref="signup">Sign Up</a></button>-->
 		<button type="button" ng-hide="isLoggedIn()"><a ui-sref="login">Login</a></button>
-<!--		<button type="button"  ng-click="saveMix()">Save</button>-->
 		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
 	</span>
 	</nav>
 	
 	<ui-view></ui-view>
+	
+	<nav class="navbarbottom">
+		<a ui-sref="about">About</a>
+	</nav>
 
 	</body>
 	

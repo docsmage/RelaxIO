@@ -16,17 +16,12 @@
 */
 }
 
-/*OVERALL NAVBAR*/
-.navbar {
+.navbartop {
 	background-color: #FFF;
 	opacity: 0.5;	
 	margin: 0 auto;
 	border-radius: 20px;
-}
-
-/*LEFT - holds master play/pause & save*/
-#playpausesave {
-	margin-top: 10px;
+	padding: 10px;
 }
 
 #masterplaypause {
@@ -50,7 +45,7 @@
 }
 
 /*RIGHT - holds about and save buttons*/
-#aboutsaved {
+#savedlogin {
 	float: right;
 	padding: 36px;
 }
@@ -214,3 +209,13 @@
 	 margin-top: -0.5rem;
 	 margin-left: -0.5rem;
  }
+
+.navbarbottom {
+	width: 100%;
+	background-color: #000;
+	opacity: 0.5;	
+/*	margin: 0 auto;*/
+	border-radius: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
