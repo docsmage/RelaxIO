@@ -12,4 +12,4 @@ relaxIO.factory("SaveMenu", function () {
 	
 });
 
-// TODO: make this work http://stackoverflow.com/questions/21082715/angular-js-element-has-no-method-queryselector
+// TODO: make this work http://www.w3schools.com/howto/howto_js_dropdown.asp - I was trying to impememt this, want to check with Matt to see if it's possible to just do this with HTML/CSS (or maybe just using angular filters)

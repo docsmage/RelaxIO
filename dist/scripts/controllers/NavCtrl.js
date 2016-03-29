@@ -11,6 +11,8 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	$scope.isLoggedIn = Session.hasSessionInfo;
 	
 	$scope.toggleAll = function () { SoundService.toggleAll();
-	};	
+	};
+	
+	$scope.isAnyPlaying = SoundService.isAnyPlaying;
 	
 }]);

@@ -1,3 +1,5 @@
+/*Top navbar*/
+
 .navbartop {
 	background-color: #FFF;
 	opacity: 0.5;	
@@ -7,11 +9,8 @@
 	margin-bottom: 30px;
 }
 
+/*LEFT- play/pause/volume & save*/
 #masterplaypause {
-	float: left;
-}
-
-#savebutton {
 	float: left;
 }
 
@@ -21,18 +20,26 @@
 	margin-right: -50px;
 }
 
-/*CENTER - holds title img*/
+#savebutton {
+	float: left;
+}
+
+/*CENTER- title img*/
 .titleimg {
 	vertical-align: middle;
 	height: 120px;	
 }
 
-/*RIGHT - holds about and save buttons*/
+/*RIGHT- loginout & saved*/
 #savedlogin {
 	float: right;
-	padding: 36px;
+	padding: 35px;
 }
- 
+
+#loginout {
+	margin-top: 10px;
+}
+
 /*Bottom navbar*/
 
 .navbarbottom {

@@ -20,6 +20,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
 	<!-- Buzz library -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
+	<!--	Jquery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>	
+	<!-- Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 	
 	<!-- app files -->
 	<script src="/scripts/sounds.js"></script>
@@ -59,12 +64,12 @@
 			
 		<span id="masterplaypause">
 			
-			<!-- Top Play/Pause -->			
+			<!-- Master Play/Pause -->			
 			<span ng-click="toggleAll()">
-				<div ng-class="{'pause': SoundService.isAnyPlaying(), 'play': !SoundService.isAnyPlaying()}"></div>
+				<div ng-class="{'pause': isAnyPlaying(), 'play': !isAnyPlaying()}"></div>
 			</span>
 			
-			<!-- Top Master Volume -->
+			<!-- Master Master Volume -->
 			<slider data-sound="all" id="mastervolume"></slider>	
 		</span>
 		
@@ -77,20 +82,18 @@
 		<!-- Navbar links -->
 		<span id="savedlogin">
 			
-<!--			<div class="savedropdown">-->
-				<button onclick="myFunction()" type="button" class="saved">Saved</button><br>
-<!--				<div id="navDropdown" class="savedropdown-content">-->
-<!--
-					<a href="#">Mix #1</a>
-					<a href="#">Mix #2</a>
-					<a href="#">Mix #3</a>
--->
-<!--				</div>-->
-<!--			</div>-->
-			
-<!--		<button type="button"><a ui-sref="signup">Sign Up</a></button>-->
-			
-		<button type="button" ng-hide="isLoggedIn()"><a ui-sref="login">Login</a></button>
+		<!-- Saved Menu -->			
+			<div class="dropdown">
+				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
+				<ul id="navDropdown" class="dropdown-menu">
+					<li><a href="#">Mix #1</a></li>
+					<li><a href="#">Mix #2</a></li>
+					<li><a href="#">Mix #3</a></li>
+				</ul>
+			</div>
+
+		<!-- Login/Out Buttons -->
+		<button type="button" ng-hide="isLoggedIn()" id="loginout"><a ui-sref="login">Login</a></button>
 			
 		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
 			
