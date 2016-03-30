@@ -45,7 +45,7 @@
 
 /* Holds individual sound img, play/pause & volume */
 
-.soundcircles {
+.bodycontainer {
 	display: block;
 	height: 40%;
 }

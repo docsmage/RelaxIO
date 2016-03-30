@@ -85,10 +85,8 @@
 		<!-- Saved Menu -->			
 			<div class="dropdown" ng-show="isLoggedIn()">
 				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
-				<ul id="navDropdown" class="dropdown-menu">
-					<li><a href="#">Mix #1</a></li>
-					<li><a href="#">Mix #2</a></li>
-					<li><a href="#">Mix #3</a></li>
+				<ul id="navDropdown" class="dropdown-menu" ng-repeat="mix in mixes">
+					<li><a ui-sref="#">{{mix.name}}</a></li>
 				</ul>
 			</div>
 
@@ -100,7 +98,7 @@
 	</span>
 	</nav>
 	
-	<ui-view></ui-view>
+	<ui-view class="bodycontainer"></ui-view>
 	
 <!--	Bottom Nav Bar -->
 	<nav class="navbarbottom">
