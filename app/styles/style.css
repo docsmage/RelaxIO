@@ -48,7 +48,13 @@
 .soundcircles {
 	display: block;
 	height: 40%;
-	
+}
+
+.disabledoverlay {
+	display: block;
+	height: 40%;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);	
 }
 
 #soundandvolume {
@@ -65,6 +71,7 @@
 	height: 100px;
 	margin: 0 auto;
 }
+
 
 /* Play & pause buttons */
 
