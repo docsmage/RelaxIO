@@ -1,4 +1,6 @@
 <div class="soundcircles" >
+	
+	<!-- Individual sounds -->
 	<div ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
 		<section class="column fourth" id="soundandvolume">
 			<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}"></div>

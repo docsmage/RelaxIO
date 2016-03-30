@@ -24,7 +24,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>	
 	<!-- Bootstrap -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
 	
 	<!-- app files -->
 	<script src="/scripts/sounds.js"></script>
@@ -60,16 +59,17 @@
 </head>
 <body class="container" id="background">
 	
+<!--	Top Nav Bar -->
 	<nav class="navbartop" ng-controller="NavCtrl">
 			
 		<span id="masterplaypause">
 			
-			<!-- Master Play/Pause -->			
+			<!-- Master Play/Pause -->
 			<span ng-click="toggleAll()">
 				<div ng-class="{'pause': isAnyPlaying(), 'play': !isAnyPlaying()}"></div>
 			</span>
 			
-			<!-- Master Master Volume -->
+			<!-- Master Volume -->
 			<slider data-sound="all" id="mastervolume"></slider>	
 		</span>
 		
@@ -102,6 +102,7 @@
 	
 	<ui-view></ui-view>
 	
+<!--	Bottom Nav Bar -->
 	<nav class="navbarbottom">
 		<a ui-sref="about">About</a>
 	</nav>
