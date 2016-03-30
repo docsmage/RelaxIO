@@ -5,6 +5,8 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 	return {
 		
 		saveMix: function () {
+			
+			if (Session.hasSessionInfo()) {
 			// allow them to enter a name
 			var mix = {
 				name: prompt("Enter a name")
@@ -15,6 +17,9 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 			};
 			// save to 'mixes' area
 			ref.child("/user/" + Session.getUserId() + "/mixes").set(mix);
+			} else {
+				alert("You're not signed up yet!");
+			}
 		}
 	}
 	
