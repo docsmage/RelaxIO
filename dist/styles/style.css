@@ -52,15 +52,6 @@
 	height: 40%;
 }
 
-/*Overlay for when master pause is enabled - not working yet!*/
-
-.disabledoverlay {
-	display: block;
-	height: 40%;
-	opacity: 0.6;
-	filter: alpha(opacity = 60);	
-}
-
 #soundandvolume {
 	height: 140px;
 }
@@ -79,7 +70,6 @@
 /* Sound circles lit up */
 
 .soundcirclelit {
-	
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
