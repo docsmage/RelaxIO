@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="/styles/normalize.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Fontello -->
+	<link rel="stylesheet" href="/fonts/fontello/css/fontello.css">
 	
 	<!-- Scripts -->
 	<!-- AngularJS -->
@@ -83,12 +85,10 @@
 		<span id="savedlogin">
 			
 		<!-- Saved Menu -->			
-			<div class="dropdown">
+			<div class="dropdown" ng-show="isLoggedIn()">
 				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
-				<ul id="navDropdown" class="dropdown-menu">
-					<li><a href="#">Mix #1</a></li>
-					<li><a href="#">Mix #2</a></li>
-					<li><a href="#">Mix #3</a></li>
+				<ul id="navDropdown" class="dropdown-menu" ng-repeat="mix in mixes">
+					<li><a ui-sref="#">{{mix.name}}</a></li>
 				</ul>
 			</div>
 
@@ -100,11 +100,14 @@
 	</span>
 	</nav>
 	
-	<ui-view></ui-view>
+	<ui-view class="bodycontainer"></ui-view>
 	
 <!--	Bottom Nav Bar -->
 	<nav class="navbarbottom">
+		
 		<a ui-sref="about">About</a>
+		<div class="icon-github"></div>
+		
 	</nav>
 
 	</body>

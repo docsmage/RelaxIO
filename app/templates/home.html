@@ -1,19 +1,28 @@
-<div class="soundcircles" >
+<!-- Individual sound circles -->
+<div ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
 	
-	<!-- Individual sounds -->
-	<div ng-repeat="sound in sounds" ng-mouseover="hoveringOverSound = true" ng-mouseleave="hoveringOverSound = false">
-		<section class="column fourth" id="soundandvolume">
-			<div ng-show="!hoveringOverSound" class="soundcircle" id="{{sound.name}}"></div>
-			<div ng-show="hoveringOverSound" ng-click="playPauseSound(sound)">
-				<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
-				</div>
+	<!--	Sets up grid-->
+	<section class="column fourth" id="soundandvolume">
+		
+		<!-- Sound circle icons-->
+		<div ng-show="!hoveringOverSound" id="{{sound.name}}" ng-class="{'soundcircleoff': !SoundService.isPlayingSound(sound), 'soundcirclelit': SoundService.isPlayingSound(sound)}"></div>
+		
+		<!-- Play/Pause buttons-->
+		<div ng-show="hoveringOverSound" ng-click="playPauseSound(sound)">
+			<div ng-class="{'pause': SoundService.isPlayingSound(sound), 'play': !SoundService.isPlayingSound(sound)}">
 			</div>
+		</div>
+		
+		<!-- Individual volumes -->
+		<div ng-show="hoveringOverSound">
+			<slider data-sound="{{sound.name}}" class="individualvolume"></slider>
+		</div>
+		
+	</section>
 
-			<!-- Individual volumes -->
-			<div ng-show="hoveringOverSound">
-				<slider data-sound="{{sound.name}}" class="individualvolume"></slider>
-			</div>
-		</section>
-
-	</div>
 </div>
+
+<!--Disabled overlay when master pause is selected -- uncomment when working on this feature-->
+<!--
+<div class="disabledoverlay" ng-class="pause">
+</div>-->

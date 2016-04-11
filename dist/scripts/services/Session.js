@@ -17,11 +17,6 @@ relaxIO.factory("Session", function () {
 		
 		getUserId: function () {
 			return sessionInfo && sessionInfo.uid;
-		},
-		
-		getMixes: function () { 
-			// check firebase docs for retrieving data - since it's asynchronous, you may need a callback to return the data
-			
 		}
 		
 	};
