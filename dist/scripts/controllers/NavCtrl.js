@@ -1,4 +1,4 @@
-relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', function ($scope, SaveMix, LogOut, Session, SoundService) {
+relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', function ($scope, SaveMix, LogOut, Session, SoundService, Login) {
 	
 	$scope.saveMix = function () {
 		SaveMix.saveMix();
@@ -15,4 +15,10 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	
 	$scope.isAnyPlaying = SoundService.isAnyPlaying;
 	
+	Login.onLogin(function () {
+		SaveMix.getMixes(function (mixes) {
+			debugger;
+			$scope.mixes = mixes;
+		});
+	});
 }]);

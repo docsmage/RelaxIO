@@ -1,9 +1,11 @@
 /*Background image for all pages*/
+
 #background {
 	background-image: url("/assets/images/Background/blur_bg_1.jpg");
 }
 
 /*Container for all pages*/
+
 .container {
 	padding-top: 50px;
 	margin: 0 auto;
@@ -50,6 +52,8 @@
 	height: 40%;
 }
 
+/*Overlay for when master pause is enabled - not working yet!*/
+
 .disabledoverlay {
 	display: block;
 	height: 40%;
@@ -63,7 +67,7 @@
 
 /* Individual sound circles */
 
-.soundcircle {
+.soundcircleoff {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -72,6 +76,20 @@
 	margin: 0 auto;
 }
 
+/* Sound circles lit up */
+
+.soundcirclelit {
+	
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;	
+	
+	box-shadow: 0px 0px 20px 8px #fff,
+		0px 0px 5px 5px #fff inset;
+}
 
 /* Play & pause buttons */
 

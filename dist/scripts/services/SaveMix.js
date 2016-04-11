@@ -20,7 +20,17 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 			} else {
 				alert("You're not signed up yet!");
 			}
+		},
+		
+		getMixes: function (callback) {			
+			ref.child("user").orderByKey().equalTo(Session.getUserId()).on("value", function(snapshot) {
+				var user = snapshot.val();
+				callback(user[Object.keys(user)[0]].mixes);
+				callback(snapshot.val());
+			}, function (errorObject) {
+				console.log("The read failed: " + errorObject.code);
+			});
 		}
-	}
 	
+	}
 }]);

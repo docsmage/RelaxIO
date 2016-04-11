@@ -2,6 +2,7 @@ relaxIO.factory('Login', ['$firebaseArray', 'Session', function($firebaseArray, 
 	
 	// TODO: Remove window.ref
 	var ref = window.ref = new Firebase("https://relaxio.firebaseio.com");
+	var onLogin = [];
 	
 	return {
 		logIn: function (email, password, callback) {
@@ -16,8 +17,19 @@ relaxIO.factory('Login', ['$firebaseArray', 'Session', function($firebaseArray, 
 				
 					Session.setSessionInfo(authData);
 					callback();
+					
+					for (var i = 0; i < onLogin.length; i++) {
+						onLogin[i]();
+					}
 				}
 			})
+		},
+		onLogin: function (callback) {
+			if (Session.hasSessionInfo()) {
+				callback();
+			} else {
+				onLogin.push(callback);
+			}
 		}
 
 	}
