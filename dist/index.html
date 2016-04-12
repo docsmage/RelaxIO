@@ -13,7 +13,6 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<!-- Fontello -->
-	<link rel="stylesheet" href="/fonts/fontello/css/fontello.css">
 	
 	<!-- Scripts -->
 	<!-- AngularJS -->
@@ -88,7 +87,7 @@
 			<div class="dropdown" ng-show="isLoggedIn()">
 				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
 				<ul id="navDropdown" class="dropdown-menu" ng-repeat="mix in mixes">
-					<li><a ui-sref="#">{{mix.name}}</a></li>
+					<li><a ng-click="playMix(mix)">{{mix.name}}</a></li>
 				</ul>
 			</div>
 
@@ -106,7 +105,7 @@
 	<nav class="navbarbottom">
 		
 		<a ui-sref="about">About</a>
-		<div class="icon-github"></div>
+		<a ui-sref="feedback">Feedback</a>
 		
 	</nav>
 

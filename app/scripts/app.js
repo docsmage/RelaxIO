@@ -23,6 +23,12 @@ var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap
 		templateUrl: '/templates/about.html'
 	});
 	
+	$stateProvider.state('feedback', {
+		url: '/feedback',
+		controller: 'MainController',
+		templateUrl: '/templates/feedback.html'
+	});	
+	
 	$stateProvider.state('saved', {
 		url: '/saved',
 		controller: 'MainController',

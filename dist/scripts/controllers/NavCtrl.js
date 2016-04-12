@@ -17,8 +17,12 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	
 	Login.onLogin(function () {
 		SaveMix.getMixes(function (mixes) {
-			debugger;
 			$scope.mixes = mixes;
-		});
+		});	
 	});
+	
+	$scope.playMix = function (mix) {
+		SoundService.loadSounds(mix.sounds);
+	};
+	
 }]);

@@ -6,6 +6,6 @@ var sounds = [
 	{name: 'oceanwaves', audioUrl: '/assets/sounds/oceanwaves'},
 	{name: 'singingbowl', audioUrl: '/assets/sounds/singingbowl'},
 	{name: 'thunderstorm', audioUrl: '/assets/sounds/thunderstorm3'},
-	{name: 'enginehum', audioUrl: '/assets/sounds/hum'},
+	{name: 'birdsong', audioUrl: '/assets/sounds/hum'},
 	{name: 'om', audioUrl: '/assets/sounds/om'}
 ];

@@ -19,21 +19,34 @@ relaxIO.factory("SoundService", function () {
 			
 			return soundData;
 		},
-
+		
+		loadSounds: function (data) {
+			var sounds = window.sounds;
+			this.pauseAll();
+			for (var i = 0, total = data.length; i < total; i++) {
+				for (var j = 0, totalSounds = sounds.length; j < totalSounds; j++) {
+					if (sounds[j].name === data[i].name) {
+						console.log("Playing sound " + sounds[j].name + " at " + data[i].volume);
+						this.playOrPause(sounds[j], data[i].volume);
+						break;
+					}
+				}
+			}
+		},
 		// load sounds
-		loadSound: function (sound) {
+		loadSound: function (sound, volume) {
 			if (!allSoundsLoaded[sound.name]) {
 				allSoundsLoaded[sound.name] = new buzz.sound(sound.audioUrl, {
 					formats: [ 'mp3' ],
 					preload: true,
 					loop: true,
-					volume: defaultVolume
+					volume: volume || defaultVolume
 				});
 			}
 		},
 		
-		playOrPause: function (sound) {		
-			this.loadSound(sound);
+		playOrPause: function (sound, volume) {		
+			this.loadSound(sound, volume);
 			var soundFile = allSoundsLoaded[sound.name];
 			if (soundFile.isPaused()) {
 				currentlyPlaying[sound.name] = true;
