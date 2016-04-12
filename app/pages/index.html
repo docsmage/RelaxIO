@@ -27,7 +27,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
 	<!-- app files -->
-	<script src="/scripts/sounds.js"></script>
 	<script src="/scripts/app.js"></script>
 	
 	<!-- controllers -->
@@ -37,6 +36,7 @@
 	<script src="/scripts/controllers/NavCtrl.js"></script>	
 	
 	<!-- services -->
+	<script src="/scripts/services/Sounds.js"></script>	
 	<script src="/scripts/services/SoundService.js"></script>
 	<script src="/scripts/services/Signup.js"></script>
 	<script src="/scripts/services/Login.js"></script>	
@@ -86,8 +86,8 @@
 		<!-- Saved Menu -->			
 			<div class="dropdown" ng-show="isLoggedIn()">
 				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
-				<ul id="navDropdown" class="dropdown-menu" ng-repeat="mix in mixes">
-					<li><a ng-click="playMix(mix)">{{mix.name}}</a></li>
+				<ul id="navDropdown" class="dropdown-menu">
+					<li ng-repeat="mix in mixes"><a ng-click="playMix(mix)">{{mix.name}}</a></li>
 				</ul>
 			</div>
 

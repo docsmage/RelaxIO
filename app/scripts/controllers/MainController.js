@@ -1,4 +1,4 @@
-relaxIO.controller('MainController', function ($scope, SoundService) {
+relaxIO.controller('MainController', function ($scope, SoundService, Sounds) {
 	
 	$scope.title = "RelaxIO";
 	
@@ -6,7 +6,7 @@ relaxIO.controller('MainController', function ($scope, SoundService) {
 	$scope.SoundService = SoundService;
 	
 	// sounds objects from sounds.js
-	$scope.sounds = angular.copy(sounds);
+	$scope.sounds = Sounds.sounds;
 	
 	// play and pause individual sounds
 	$scope.playPauseSound = function (sound) {

@@ -1,6 +1,5 @@
-relaxIO.factory("SoundService", function () {
+relaxIO.factory("SoundService", ["Sounds", function (Sounds) {
 	
-	var sounds = sounds;
 	var allSoundsLoaded = {};
 	var currentlyPlaying = {};
 	var previouslyPlaying = {};
@@ -21,7 +20,7 @@ relaxIO.factory("SoundService", function () {
 		},
 		
 		loadSounds: function (data) {
-			var sounds = window.sounds;
+			var sounds = Sounds.sounds;
 			this.pauseAll();
 			for (var i = 0, total = data.length; i < total; i++) {
 				for (var j = 0, totalSounds = sounds.length; j < totalSounds; j++) {
@@ -110,4 +109,4 @@ relaxIO.factory("SoundService", function () {
 	
 	return SoundService;
 	
-});
+}]);
