@@ -101,9 +101,9 @@ relaxIO.factory("SoundService", ["Sounds", function (Sounds) {
 				defaultVolume = volume;
 			}
 		},
-		setSoundVolume: function (soundName, volume) {
+		setSoundVolume: function (sound, volume) {
 		// check to see if song is loaded before you change the volume
-			allSoundsLoaded[soundName].setVolume(volume);
+			allSoundsLoaded[sound].setVolume(volume);
 		}
 	};
 	
