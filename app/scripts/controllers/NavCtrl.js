@@ -1,4 +1,4 @@
-relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', function ($scope, SaveMix, LogOut, Session, SoundService, Login) {
+relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', '$modal', function ($scope, SaveMix, LogOut, Session, SoundService, Login, $modal) {
 	
 	$scope.saveMix = function () {
 		SaveMix.saveMix();
@@ -23,6 +23,12 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	
 	$scope.playMix = function (mix) {
 		SoundService.loadSounds(mix.sounds);
+	};
+	
+	$scope.open = function () {
+		var modalInstance = $modal.open({
+			templateUrl: 'templates/savemixpopup.html',
+		});
 	};
 	
 }]);
