@@ -4,23 +4,17 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 	
 	return {
 		
-		saveMix: function () {
+		saveMix: function (name) {
 			
-			if (Session.hasSessionInfo()) {
-			// allow them to enter a name
-				var name = prompt("Enter a name");
+			// save mix name
 			var mix = {
-				name: name
-				// TODO: rewrite as styled popup
-				,
+				name: name,
+				
 				// compile sounds & volumes
 				sounds: SoundService.getCurrentlyPlaying()
 			};
 			// save to 'mixes' area
 			ref.child("/user/" + Session.getUserId() + "/mixes/" + name).set(mix);
-			} else {
-				alert("You're not signed up yet!");
-			}
 		},
 		
 		getMixes: function (callback) {				ref.child("user").orderByKey().equalTo(Session.getUserId()).on("value", function(snapshot) {

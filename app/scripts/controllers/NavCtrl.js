@@ -1,7 +1,28 @@
 relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', '$modal', function ($scope, SaveMix, LogOut, Session, SoundService, Login, $modal) {
+
+	$scope.openSaveMix = function () {
+		var modalInstance = $modal.open({
+			templateUrl: 'templates/savemixpopup.html',
+		});
+	};
+	
+	$scope.openSignUp = function () {
+		var modalInstance = $modal.open({
+			templateUrl: 'templates/signuppopup.html',
+		});
+	};	
+	
+	$scope.saveModal = function () {
+		if (Session.hasSessionInfo()) {
+			$scope.openSaveMix();
+		} else {
+			$scope.openSignUp();
+		}
+	};
 	
 	$scope.saveMix = function () {
-		SaveMix.saveMix();
+		var name = $scope.name;
+		SaveMix.saveMix(name);
 	};
 	
 	$scope.logOut = function () {
@@ -23,12 +44,6 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	
 	$scope.playMix = function (mix) {
 		SoundService.loadSounds(mix.sounds);
-	};
-	
-	$scope.open = function () {
-		var modalInstance = $modal.open({
-			templateUrl: 'templates/savemixpopup.html',
-		});
 	};
 	
 }]);
