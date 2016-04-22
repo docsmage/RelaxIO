@@ -54,7 +54,7 @@
 
 /* Pop-up Stylings */
 
-#popup {
+.popup {
 	background-color: lightgrey;
 	padding: 30px;
 }
