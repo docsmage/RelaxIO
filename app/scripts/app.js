@@ -46,4 +46,11 @@ var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap
 		controller: 'LogInCtrl',
 		templateUrl: '/templates/login.html'
 	});	
+	
+	$stateProvider.state('profile', {
+		url: '/profile',
+		controller: 'MainController',
+		templateUrl: '/templates/profile.html'
+	});		
+	
 });
