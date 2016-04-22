@@ -1,0 +1,11 @@
+<div id="profilepage" ng-controller="NavCtrl">
+
+	<h4>Saved Mixes</h4>
+	
+	<div id="savedmixlistdiv">
+		<ul class="savedlist">
+			<li ng-repeat="mix in mixes"><a ng-click="playMix(mix)">{{mix.name}}</a></li>
+		</ul>
+	</div>
+	
+</div>

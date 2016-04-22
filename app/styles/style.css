@@ -186,3 +186,23 @@
 	 margin-top: -0.5rem;
 	 margin-left: -0.5rem;
  }
+
+/* Saved Mixes Page */
+
+#profilepage {
+	
+}
+
+.savedlist {
+	list-style-position: outside;
+	list-style-type: none;
+	text-align:justify;
+	margin-left: 25px;
+
+}
+
+#savedmixlistdiv {
+	margin: 0 auto;
+	width: 30%;
+	
+}
