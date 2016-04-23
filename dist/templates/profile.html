@@ -4,7 +4,11 @@
 	
 	<div id="savedmixlistdiv">
 		<ul class="savedlist">
-			<li ng-repeat="mix in mixes"><a ng-click="playMix(mix)">{{mix.name}}</a></li>
+			<li ng-repeat="mix in mixes">
+				<a ng-click="deleteMix(mix)">
+					<span class="glyphicon glyphicon-trash"></span>
+				</a>
+				<a ng-click="playMix(mix)">{{mix.name}}</a></li>
 		</ul>
 	</div>
 	

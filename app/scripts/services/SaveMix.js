@@ -13,10 +13,12 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 				// compile sounds & volumes
 				sounds: SoundService.getCurrentlyPlaying()
 			};
+			
 			// save to 'mixes' area
 			ref.child("/user/" + Session.getUserId() + "/mixes/" + name).set(mix);
 		},
 		
+		// function for retrieving mixes
 		getMixes: function (callback) {				ref.child("user").orderByKey().equalTo(Session.getUserId()).on("value", function(snapshot) {
 				var user = snapshot.val();
 			
