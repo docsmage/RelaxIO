@@ -97,6 +97,7 @@
 				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
 				<ul id="navDropdown" class="dropdown-menu">
 					<li ng-repeat="mix in mixes"><a ng-click="playMix(mix)">{{mix.name}}</a></li>
+					<li><a ui-sref="profile">Profile</a></li>
 				</ul>
 			</div>
 
@@ -114,9 +115,9 @@
 	<nav class="navbarbottom">
 		
 		<a ui-sref="about" class="bottomnavicon">About</a>
-		<a ui-sref="feedback" class="bottomnavicon">Feedback</a>
 		<a ui-sref="profile" class="bottomnavicon">Profile</a>
-		<a href="https://github.com/voiceofrae/RelaxIO"><span class="icon-github" class="bottomnavicon">  Github</span></a>
+		<a href="https://github.com/voiceofrae/RelaxIO" class="bottomnavicon">Github</a>
+		<a ui-sref="feedback" class="bottomnavicon">Feedback</a>		
 		
 	</nav>
 
