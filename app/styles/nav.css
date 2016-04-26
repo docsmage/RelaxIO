@@ -52,9 +52,23 @@
 	margin-top: 30px;
 }
 
+.bottomnavicon {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
 /* Pop-up Stylings */
 
 .popup {
 	background-color: lightgrey;
 	padding: 30px;
+}
+
+/* Font */
+
+@font-face {
+font-family: 'Fontello';
+src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }

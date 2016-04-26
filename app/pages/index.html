@@ -13,6 +13,7 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<!-- Fontello - TBD -->
+	<link rel="stylesheet" href="/assets/fonts/fontello/css/fontello.css">	
 	
 	<!-- Favicon -->
 	<link rel="icon" type="image/jpg" href="/images/favicon.ico" />
@@ -20,6 +21,7 @@
 	<!-- Scripts -->
 	<!-- AngularJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<!--	<script src="/scripts/angular.js"></script>-->
 	<!-- UI Router -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
 	<!--	Jquery-->
@@ -37,7 +39,8 @@
 	<script src="/scripts/controllers/MainController.js"></script>
 	<script src="/scripts/controllers/SignUpCtrl.js"></script>
 	<script src="/scripts/controllers/LogInCtrl.js"></script>
-	<script src="/scripts/controllers/NavCtrl.js"></script>	
+	<script src="/scripts/controllers/NavCtrl.js"></script>
+	<script src="/scripts/controllers/ProfileCtrl.js"></script>	
 	
 	<!-- services -->
 	<script src="/scripts/services/Sounds.js"></script>	
@@ -46,7 +49,9 @@
 	<script src="/scripts/services/Login.js"></script>	
 	<script src="/scripts/services/LogOut.js"></script>
 	<script src="/scripts/services/SaveMix.js"></script>
-	<script src="/scripts/services/Session.js"></script>	
+	<script src="/scripts/services/Session.js"></script>
+	<script src="/scripts/services/DeleteMix.js"></script>	
+	
 	
 	<!-- directives -->
 	<script src="/scripts/directives/slider.js"></script>
@@ -92,6 +97,7 @@
 				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
 				<ul id="navDropdown" class="dropdown-menu">
 					<li ng-repeat="mix in mixes"><a ng-click="playMix(mix)">{{mix.name}}</a></li>
+					<li><a ui-sref="profile">Profile</a></li>
 				</ul>
 			</div>
 
@@ -108,9 +114,10 @@
 <!--	Bottom Nav Bar -->
 	<nav class="navbarbottom">
 		
-		<a ui-sref="about">About</a>
-		<a ui-sref="feedback">Feedback</a>
-		<a ui-sref="profile">Profile</a>
+		<a ui-sref="about" class="bottomnavicon">About</a>
+		<a ui-sref="profile" class="bottomnavicon">Profile</a>
+		<a href="https://github.com/voiceofrae/RelaxIO" class="bottomnavicon">Github</a>
+		<a ui-sref="feedback" class="bottomnavicon">Feedback</a>		
 		
 	</nav>
 

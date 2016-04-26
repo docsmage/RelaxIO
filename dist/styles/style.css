@@ -22,15 +22,22 @@
 
 /* Grid system for sounds */
 
- @media (min-width: 40rem) {
-	 html { font-size: 112%; }
-	 
-	 .column {
+.column {
 		 float: left;
 		 padding-left: 1rem;
 		 padding-right: 1rem;
 		 padding-top: 1rem;
-	 }
+
+}
+
+@media(max-width:39rem) {
+	 .column.fourth { width: 50%; }
+	
+}
+
+ @media (min-width: 40rem) {
+	 html { font-size: 112%; }
+
 	 
 	 .column.full { width: 100%; }
 	 .column.two-thirds { width: 66.7%; }
@@ -40,7 +47,8 @@
 	 .column.fifth { width: 20%; }	 
  }
 
-  Large screens (1024px) 
+/*  Large screens (1024px) */
+
  @media (min-width: 64rem) {
 	 html { font-size: 120%; }
  }
