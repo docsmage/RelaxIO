@@ -10,8 +10,10 @@ relaxIO.factory("DeleteMix", ["SoundService", "Session", function (SoundService,
 			var r = confirm("Are you sure you want to delete this mix?");
 			
 			if (r == true) {
-				var mix = {name: name};
-				ref.child("/user/" + Session.getUserId() + "/mixes/" + mix).remove();
+				
+				// CURRENTLY DELETES ENTIRE DATABASE
+				ref.child("/user/" + Session.getUserId() + "/mixes/" + mix.name).remove();
+				
 			} else {
 				return;
 			}

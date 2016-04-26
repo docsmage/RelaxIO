@@ -70,6 +70,8 @@ relaxIO.factory("SoundService", ["Sounds", function (Sounds) {
 			
 			for (var sound in allSoundsLoaded) {
 				{
+					
+				// check to make sure the song is playing before we add it
 					previouslyPlaying[sound] = true;
 					allSoundsLoaded[sound].pause();
 				}

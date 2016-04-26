@@ -19,7 +19,9 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 		},
 		
 		// function for retrieving mixes
-		getMixes: function (callback) {				ref.child("user").orderByKey().equalTo(Session.getUserId()).on("value", function(snapshot) {
+		getMixes: function (callback) {				
+		// grabbing user info	
+			ref.child("user").orderByKey().equalTo(Session.getUserId()).on("value", function(snapshot) {
 				var user = snapshot.val();
 			
 				callback(user[Object.keys(user)[0]].mixes);
