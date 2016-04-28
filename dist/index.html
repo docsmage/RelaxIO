@@ -71,8 +71,10 @@
 	
 <!--	Top Nav Bar -->
 	<nav class="navbartop" ng-controller="NavCtrl">
-			
-		<span id="masterplaypause">
+
+		<div id="topleft">
+		
+		<div id="masterplaypause">
 			
 			<!-- Master Play/Pause -->
 			<span ng-click="toggleAll()">
@@ -81,20 +83,19 @@
 			
 			<!-- Master Volume -->
 			<slider data-sound="all" id="mastervolume"></slider>	
-		</span>
+		</div>
 		
 		<!-- Save Button -->
 			<img src="/assets/images/Save-Icon.png" alt="Save Button" id="savebutton" ng-click="saveModal()">
-		
-		<!-- Title img -->
-		<span id="titleimage"><a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="titleimg"></a></span>
+			
+	</div>
 		
 		<!-- Navbar links -->
 		<span id="savedlogin">
 			
 		<!-- Saved Menu -->			
 			<div class="dropdown" ng-show="isLoggedIn()">
-				<button type="button" class="saved dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
+				<button type="button" class="saved dropdown-toggle" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
 				<ul id="navDropdown" class="dropdown-menu">
 					<li ng-repeat="mix in mixes"><a ng-click="playMix(mix)">{{mix.name}}</a></li>
 					<li><a ui-sref="profile">Profile</a></li>
@@ -106,7 +107,11 @@
 			
 		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
 			
-	</span>
+	</span>		
+		
+		<!-- Title img -->
+		<span id="titleimage"><a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="titleimg"></a></span>
+
 	</nav>
 	
 	<ui-view class="bodycontainer"></ui-view>
@@ -116,7 +121,7 @@
 		
 		<a ui-sref="about" class="bottomnavicon">About</a>
 		<a href="https://github.com/voiceofrae/RelaxIO" target="_blank" class="bottomnavicon">Github</a>
-		<a href="https://twitter.com/voiceofrae" target="_blank" class="bottomnavicon">Contact</a>		
+		<a href="https://twitter.com/voiceofrae" target="_blank"  class="bottomnavicon">Contact</a>		
 		
 	</nav>
 

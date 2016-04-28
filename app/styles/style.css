@@ -2,12 +2,24 @@
 
 #background {
 	background-image: url("/assets/images/Background/pink-gradient.jpg");
+	
+	background-color: lightsteelblue;
+	
+/*
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+ 	min-height: 100%;
+*/
+	
+/*	WHY AREN'T THESE WORKING FOR ME?*/
+	
 }
 
 /*Container for all pages*/
 
 .container {
-	padding-top: 50px;
+	padding-top: 20px;
 	margin: 0 auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
@@ -57,7 +69,7 @@
 
 .bodycontainer {
 	display: block;
-	height: 40%;
+	height: 20%;
 }
 
 #soundandvolume {
@@ -197,10 +209,6 @@
 
 /* Saved Mixes Page */
 
-#profilepage {
-	
-}
-
 .savedlist {
 	list-style-position: outside;
 	list-style-type: none;
@@ -213,4 +221,13 @@
 	margin: 0 auto;
 	width: 30%;
 	
+}
+
+/* About page */
+
+#aboutpage {
+	margin: 0 auto;
+	text-align: center;
+	width: 70%;
+	font-size: 120%;
 }
