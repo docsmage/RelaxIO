@@ -1,19 +1,20 @@
 /*Background image for all pages*/
 
 #background {
-	background-image: url("/assets/images/Background/pink-gradient.jpg");
-	
+
 	background-color: lightsteelblue;
-	
+
 /*
+	#background {
+	background-image: url("/assets/images/Background/pink-gradient.jpg");
 	background-repeat: no-repeat;
-	background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 	height: 100%;
- 	min-height: 100%;
+ 	min-height: 100%;	
 */
-	
-/*	WHY AREN'T THESE WORKING FOR ME?*/
-	
 }
 
 /*Container for all pages*/
@@ -213,7 +214,6 @@
 	list-style-position: outside;
 	list-style-type: none;
 	text-align:justify;
-	margin-left: 25px;
 
 }
 

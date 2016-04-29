@@ -21,12 +21,18 @@ relaxIO.factory("SoundService", ["Sounds", function (Sounds) {
 		
 		loadSounds: function (data) {
 			var sounds = Sounds.sounds;
+			var soundNode; // for volumes
 			this.pauseAll();
 			for (var i = 0, total = data.length; i < total; i++) {
 				for (var j = 0, totalSounds = sounds.length; j < totalSounds; j++) {
 					if (sounds[j].name === data[i].name) {
 						console.log("Playing sound " + sounds[j].name + " at " + data[i].volume);
 						this.playOrPause(sounds[j], data[i].volume);
+						
+						// Load saved volumes						
+						soundNode = document.querySelector("[data-sound='" + data[i].name + "']");
+						soundNode.querySelector(".thumb").style.left = data[i].volume + "%";
+						soundNode.querySelector(".fill").style.width = data[i].volume + "%";
 						break;
 					}
 				}
