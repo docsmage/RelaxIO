@@ -1,7 +1,6 @@
 relaxIO.factory('Signup', ['$firebaseArray', function($firebaseArray){
 	
-	// TODO: Remove window.ref
-	var ref = window.ref = new Firebase("https://relaxio.firebaseio.com");
+	var ref = new Firebase("https://relaxio.firebaseio.com");
 	
 	var isNewUser = true;
 
@@ -12,10 +11,9 @@ relaxIO.factory('Signup', ['$firebaseArray', function($firebaseArray){
 				password: password
 			}, function(error, userData) {
 				if (error) {
-					console.log("Error creating user:", error);
+					alert("Error signing up - please try again");
 				} else {
 					callback(userData);
-					console.log("Successfully created user account with uid:", userData.uid);
 				}
 			});
 		}

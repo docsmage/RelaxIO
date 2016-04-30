@@ -26,7 +26,6 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 			
 				callback(user[Object.keys(user)[0]].mixes);
 			}, function (errorObject) {
-				console.log("The read failed: " + errorObject.code);
 			});
 		}
 	

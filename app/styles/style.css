@@ -1,5 +1,3 @@
-/*Background image for all pages*/
-
 #background {
 
 background-color: lightsteelblue;
@@ -14,12 +12,7 @@ background-color: lightsteelblue;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
   text-align: center;	
-	
-/*
-	border-style: dotted;
-	border-width: 1px;
-	border-color: black;
-*/
+
 }
 
 /* Grid system for sounds */
@@ -32,10 +25,14 @@ background-color: lightsteelblue;
 
 }
 
+/* Small screens & mobile */
+
 @media(max-width:39rem) {
 	 .column.fourth { width: 50%; }
 	
 }
+
+/* Medium screens */
 
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
@@ -218,5 +215,10 @@ background-color: lightsteelblue;
 	margin: 0 auto;
 	text-align: center;
 	width: 70%;
+	font-size: 120%;
+}
+
+.contacticon {
+	margin: 8px;
 	font-size: 120%;
 }

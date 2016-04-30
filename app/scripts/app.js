@@ -13,25 +13,25 @@ var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap
 
   $stateProvider.state('home', {
       url: '/',
-      controller: 'MainController',
+      controller: 'MainCtrl',
       templateUrl: '/templates/home.html'
 	});
 	
 	$stateProvider.state('about', {
 		url: '/about',
-		controller: 'MainController',
+		controller: 'MainCtrl',
 		templateUrl: '/templates/about.html'
 	});
 	
 	$stateProvider.state('feedback', {
 		url: '/feedback',
-		controller: 'MainController',
+		controller: 'MainCtrl',
 		templateUrl: '/templates/feedback.html'
 	});	
 	
 	$stateProvider.state('saved', {
 		url: '/saved',
-		controller: 'MainController',
+		controller: 'MainCtrl',
 		templateUrl: '/templates/savedmixes.html'
 	});		
 

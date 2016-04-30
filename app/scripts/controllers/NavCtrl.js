@@ -1,5 +1,4 @@
 relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', '$modal', function ($scope, SaveMix, LogOut, Session, SoundService, Login, $modal) {
-
 	
 	var modalInstance;
 	

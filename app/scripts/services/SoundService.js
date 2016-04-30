@@ -26,7 +26,6 @@ relaxIO.factory("SoundService", ["Sounds", function (Sounds) {
 			for (var i = 0, total = data.length; i < total; i++) {
 				for (var j = 0, totalSounds = sounds.length; j < totalSounds; j++) {
 					if (sounds[j].name === data[i].name) {
-						console.log("Playing sound " + sounds[j].name + " at " + data[i].volume);
 						this.playOrPause(sounds[j], data[i].volume);
 						
 						// Load saved volumes						

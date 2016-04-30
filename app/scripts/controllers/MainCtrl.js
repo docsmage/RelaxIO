@@ -1,6 +1,4 @@
-relaxIO.controller('MainController', function ($scope, SoundService, Sounds) {
-	
-	$scope.title = "RelaxIO";
+relaxIO.controller('MainCtrl', function ($scope, SoundService, Sounds) {
 	
 	// a new soundService object
 	$scope.SoundService = SoundService;

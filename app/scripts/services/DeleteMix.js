@@ -1,6 +1,5 @@
 relaxIO.factory("DeleteMix", ["SoundService", "Session", function (SoundService, Session) {
 	
-	
 	var ref = new Firebase("https://relaxio.firebaseio.com/users");
 	
 	return {
@@ -11,7 +10,6 @@ relaxIO.factory("DeleteMix", ["SoundService", "Session", function (SoundService,
 			
 			if (r == true) {
 				
-				// CURRENTLY DELETES ENTIRE DATABASE
 				ref.child("/user/" + Session.getUserId() + "/mixes/" + mix.name).remove();
 				
 			} else {
