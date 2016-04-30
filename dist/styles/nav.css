@@ -3,10 +3,9 @@
 .navbartop {
 	background-color: #FFF;
 	opacity: 0.6;	
-	margin: 0 auto;
 	border-radius: 20px;
 	padding: 10px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 /*LEFT- play/pause/volume & save*/
@@ -26,14 +25,19 @@
 
 /*CENTER- title img*/
 .titleimg {
-	vertical-align: middle;
-	height: 120px;	
+	height: 110px;
+	margin: 5px;
 }
 
 /*RIGHT- loginout & saved*/
 #savedlogin {
 	float: right;
-	padding: 35px;
+	margin: 32px;	
+/*
+	border-style: dotted;
+	border-width: 1px;
+	border-color: black;	
+*/
 }
 
 #loginout {
@@ -45,11 +49,11 @@
 .navbarbottom {
 	background-color: #000;
 	opacity: 0.5;	
-	margin: 0 auto;
+/*	margin: 0 auto;*/
 	border-radius: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	margin-top: 30px;
+	margin-top: 400px;
 }
 
 .bottomnavicon {

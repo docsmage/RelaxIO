@@ -1,13 +1,20 @@
 relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', '$modal', function ($scope, SaveMix, LogOut, Session, SoundService, Login, $modal) {
 
+	
+	var modalInstance;
+	
+	$scope.closeModal = function () {
+		modalInstance.close();
+	};
+	
 	$scope.openSaveMix = function () {
-		var modalInstance = $modal.open({
+		modalInstance = $modal.open({
 			templateUrl: 'templates/savemixpopup.html',
 		});
 	};
 	
 	$scope.openSignUp = function () {
-		var modalInstance = $modal.open({
+		modalInstance = $modal.open({
 			templateUrl: 'templates/signuppopup.html',
 		});
 	};	
