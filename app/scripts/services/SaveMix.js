@@ -18,7 +18,7 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 			ref.child("/user/" + Session.getUserId() + "/mixes/" + name).set(mix);
 		},
 		
-		// function for retrieving mixes
+		// load saved mixes
 		getMixes: function (callback) {				
 		// grabbing user info	
 			ref.child("user").orderByKey().equalTo(Session.getUserId()).on("value", function(snapshot) {
