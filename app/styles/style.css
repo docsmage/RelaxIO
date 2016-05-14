@@ -26,15 +26,21 @@ background-color: lightsteelblue;
 }
 
 /* Small screens & mobile */
+/*40rem OR 480px*/
+@media(max-width:691px) {
+	.column.fourth {
+		width: 50%;
+	}
 
-@media(max-width:39rem) {
-	 .column.fourth { width: 50%; }
+	.navbartop {
+		max-width: 400px;
+		margin: 0 auto; }
 	
 }
 
 /* Medium screens */
-
- @media (min-width: 40rem) {
+/*481px*/
+@media (min-width: 692px) {
 	 html { font-size: 112%; }
 
 	 
@@ -48,7 +54,7 @@ background-color: lightsteelblue;
 
 /*  Large screens (1024px) */
 
- @media (min-width: 64rem) {
+ @media (min-width: 1024px) {
 	 html { font-size: 120%; }
  }
 
