@@ -111,11 +111,15 @@
 					<li><a ui-sref="profile">Profile</a></li>
 				</ul>
 			</div>
-
-		<!-- Login/Out Buttons -->
-		<button type="button" ng-hide="isLoggedIn()" id="loginout"><a ui-sref="login">Login</a></button>
 			
-		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
+		<!-- Logout Button -->	
+		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>				
+	
+		<!-- Signup Button -->
+		<button type="button" ng-hide="isLoggedIn()"><a ui-sref="signup">Signup</a></button><br>		
+			
+		<!-- Login Button -->
+		<button type="button" ng-hide="isLoggedIn()"><a ui-sref="login">Login</a></button><br>							
 			
 	</span>		
 		

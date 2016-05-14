@@ -29,14 +29,10 @@
 	margin: 5px;
 }
 
-/*RIGHT- loginout & saved*/
+/*RIGHT- logoutbutton & saved*/
 #savedlogin {
 	float: right;
 	margin: 32px;	
-}
-
-#loginout {
-	margin-top: 10px;
 }
 
 /*Bottom navbar*/
