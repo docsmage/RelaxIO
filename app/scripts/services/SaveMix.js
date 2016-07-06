@@ -16,6 +16,7 @@ relaxIO.factory("SaveMix", ["SoundService", "Session", function (SoundService, S
 			
 			// save to 'mixes' area
 			ref.child("/user/" + Session.getUserId() + "/mixes/" + name).set(mix);
+		
 		},
 		
 		// load saved mixes

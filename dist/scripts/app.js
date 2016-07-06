@@ -53,4 +53,11 @@ var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap
 		templateUrl: '/templates/profile.html'
 	});		
 	
+	relaxIO.run(['Auth', 'UserRestService', function run(Auth, UserRestService) {
+		
+		var _user = UserRestService.requestCurrentUser();
+		Auth.set(_user);
+		
+	}])
+	
 });

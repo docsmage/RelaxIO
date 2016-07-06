@@ -1,22 +1,23 @@
-relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', '$modal', function ($scope, SaveMix, LogOut, Session, SoundService, Login, $modal) {
+relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundService', 'Login', '$uibModal', function ($scope, SaveMix, LogOut, Session, SoundService, Login, $uibModal) {
 	
 	var modalInstance;
-	
-	$scope.closeModal = function () {
-		modalInstance.close();
-	};
-	
+
 	$scope.openSaveMix = function () {
-		modalInstance = $modal.open({
+		modalInstance = $uibModal.open({
 			templateUrl: 'templates/savemixpopup.html',
 		});
 	};
 	
 	$scope.openSignUp = function () {
-		modalInstance = $modal.open({
+		modalInstance = $uibModal.open({
 			templateUrl: 'templates/signuppopup.html',
 		});
-	};	
+	};
+	
+	$scope.closeModal = function () {
+		modalInstance.close();
+	};
+		
 	
 	$scope.saveModal = function () {
 		if (Session.hasSessionInfo()) {
@@ -29,6 +30,8 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	$scope.saveMix = function () {
 		var name = $scope.name;
 		SaveMix.saveMix(name);
+		modalInstance.closeModal();
+		
 	};
 	
 	$scope.logOut = function () {
