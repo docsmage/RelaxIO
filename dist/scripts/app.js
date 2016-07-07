@@ -1,4 +1,4 @@
-var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap", "ngCookies"])
+var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap", "ngCookies", "ngAnimate"])
 
 // config states & controllers
 .config(function($stateProvider, $locationProvider, $urlRouterProvider) {
@@ -51,13 +51,14 @@ var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap
 		url: '/profile',
 		controller: 'ProfileCtrl',
 		templateUrl: '/templates/profile.html'
-	});		
-	
-	relaxIO.run(['Auth', 'UserRestService', function run(Auth, UserRestService) {
+	});
+
+	relaxIO.run(['Auth', 'UserRestService', '$uibModalStack', function run(Auth, UserRestService, $uibModalStack) {
 		
 		var _user = UserRestService.requestCurrentUser();
 		Auth.set(_user);
+		$uibModalStack.dismissAll();
 		
-	}])
+	}]);	
 	
 });

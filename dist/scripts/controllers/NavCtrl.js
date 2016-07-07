@@ -5,17 +5,19 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	$scope.openSaveMix = function () {
 		modalInstance = $uibModal.open({
 			templateUrl: 'templates/savemixpopup.html',
+			animate: false,
 		});
 	};
 	
 	$scope.openSignUp = function () {
 		modalInstance = $uibModal.open({
 			templateUrl: 'templates/signuppopup.html',
+			animate: false,
 		});
 	};
 	
 	$scope.closeModal = function () {
-		modalInstance.close();
+		modalInstance.dismiss();
 	};
 		
 	
@@ -30,7 +32,7 @@ relaxIO.controller('NavCtrl', ['$scope', 'SaveMix', 'LogOut', 'Session', 'SoundS
 	$scope.saveMix = function () {
 		var name = $scope.name;
 		SaveMix.saveMix(name);
-		modalInstance.closeModal();
+		$scope.closeModal(modalInstance);
 		
 	};
 	
