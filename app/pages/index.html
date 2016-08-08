@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html ng-app="relaxIO">	
+<html ng-app="relaxIO">
 <head lang="en">
     <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Relaxio</title>
-	
+
 	<!-- Styles -->
 	<link rel="stylesheet" href="/styles/style.css">
-	<link rel="stylesheet" href="/styles/nav.css">	
+	<link rel="stylesheet" href="/styles/nav.css">
 	<!--  Normalize -->
 	<link rel="stylesheet" href="/styles/normalize.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<!-- Fontello -->
-	<link rel="stylesheet" href="/assets/fonts/fontello/css/fontello.css">	
-	
+	<link rel="stylesheet" href="/assets/fonts/fontello/css/fontello.css">
+
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/apple-icon-60x60.png">
@@ -30,7 +30,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/assets/images/icons/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
 	<link rel="manifest" href="/assets/images/icons/manifest.json">
-	
+
 	<!-- Scripts -->
 	<!-- AngularJS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
@@ -40,70 +40,79 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 	<!-- Bootstrap -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	
+
 	<!-- Buzz library -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
-	
+
 	<!-- app files -->
 	<script src="/scripts/app.js"></script>
-	
+
 	<!-- controllers -->
 	<script src="/scripts/controllers/MainCtrl.js"></script>
 	<script src="/scripts/controllers/SignUpCtrl.js"></script>
 	<script src="/scripts/controllers/LogInCtrl.js"></script>
 	<script src="/scripts/controllers/NavCtrl.js"></script>
-	<script src="/scripts/controllers/ProfileCtrl.js"></script>	
-	
+	<script src="/scripts/controllers/ProfileCtrl.js"></script>
+
 	<!-- services -->
-	<script src="/scripts/services/Sounds.js"></script>	
+	<script src="/scripts/services/Sounds.js"></script>
 	<script src="/scripts/services/SoundService.js"></script>
 	<script src="/scripts/services/Signup.js"></script>
-	<script src="/scripts/services/Login.js"></script>	
+	<script src="/scripts/services/Login.js"></script>
 	<script src="/scripts/services/LogOut.js"></script>
 	<script src="/scripts/services/SaveMix.js"></script>
 	<script src="/scripts/services/Session.js"></script>
 	<script src="/scripts/services/DeleteMix.js"></script>
-	
+
 	<!-- directives -->
 	<script src="/scripts/directives/slider.js"></script>
-	
+
 	<!-- Angular UI Bootstrap -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
 	<!-- Angular Cookies -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.24/angular-cookies.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.24/angular-cookies.min.js"></script>
 	<!-- Firebase -->
-	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
 	<!-- AngularFire -->
-	<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-	
+	<script src="https://cdn.firebase.com/libs/angularfire/2.0.0/angularfire.min.js"></script>
+  <script>
+  // Initialize the Firebase SDK
+  var config = {
+    apiKey: '<your-api-key>',
+    authDomain: '<your-auth-domain>',
+    databaseURL: 'https://relaxio.firebaseio.com',
+    storageBucket: '<your-storage-bucket>'
+  };
+  firebase.initializeApp(config);
+</script>
 </head>
 <body id="background" class="container">
-	
+
 <!--	Top Nav Bar -->
 	<nav class="navbartop" ng-controller="NavCtrl">
 
 		<div id="topleft">
-		
+
 		<div id="masterplaypause">
-			
+
 			<!-- Master Play/Pause -->
 			<span ng-click="toggleAll()">
 				<div ng-class="{'pause': isAnyPlaying(), 'play': !isAnyPlaying()}"></div>
 			</span>
-			
+
 			<!-- Master Volume -->
-			<slider data-sound="all" id="mastervolume"></slider>	
+			<slider data-sound="all" id="mastervolume"></slider>
 		</div>
-		
+
 			<!-- Save Button -->
 			<img src="/assets/images/Save-Icon.png" alt="Save Button" id="savebutton" ng-click="saveModal()">
-			
+
 	</div>
-		
+
 		<!-- Navbar links -->
 		<span id="savedlogin">
-			
-		<!-- Saved Menu -->			
+
+		<!-- Saved Menu -->
 		<div class="dropdown" ng-show="isLoggedIn()">
 				<button type="button" class="saved dropdown-toggle" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
 				<ul id="navDropdown" class="dropdown-menu">
@@ -114,28 +123,28 @@
 
 		<!-- Login/Out Buttons -->
 		<button type="button" ng-hide="isLoggedIn()" id="loginout"><a ui-sref="login">Login</a></button>
-			
+
 		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
-			
-	</span>		
-		
+
+	</span>
+
 		<!-- Title img -->
 		<span id="titleimage"><a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="titleimg"></a></span>
 
 	</nav>
-	
+
 	<ui-view class="bodycontainer"></ui-view>
-	
+
 <!--	Bottom Nav Bar -->
 	<nav class="navbarbottom">
-		
+
 		<a ui-sref="home" class="bottomnavicon">Home</a>
 		<a ui-sref="about" class="bottomnavicon">About</a>
 		<a href="http://github.com/voiceofrae/RelaxIO" target="_blank" class="bottomnavicon">Github</a>
 		<a href="http://renee-cs.com/" target="_blank"  class="bottomnavicon">Connect</a>
-		
+
 	</nav>
 
 	</body>
-	
+
 </html>

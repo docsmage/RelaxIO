@@ -1,4 +1,4 @@
-var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap", "ngCookies"])
+var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap", "ngCookies", "firebase"])
 
 // config states & controllers
 .config(function($stateProvider, $locationProvider, $urlRouterProvider) {
@@ -16,41 +16,41 @@ var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap
       controller: 'MainCtrl',
       templateUrl: '/templates/home.html'
 	});
-	
+
 	$stateProvider.state('about', {
 		url: '/about',
 		controller: 'MainCtrl',
 		templateUrl: '/templates/about.html'
 	});
-	
+
 	$stateProvider.state('feedback', {
 		url: '/feedback',
 		controller: 'MainCtrl',
 		templateUrl: '/templates/feedback.html'
-	});	
-	
+	});
+
 	$stateProvider.state('saved', {
 		url: '/saved',
 		controller: 'MainCtrl',
 		templateUrl: '/templates/savedmixes.html'
-	});		
+	});
 
 	$stateProvider.state('signup', {
 		url: '/signup',
 		controller: 'SignUpCtrl',
 		templateUrl: '/templates/signup.html'
 	});
-	
+
 	$stateProvider.state('login', {
 		url: '/login',
 		controller: 'LogInCtrl',
 		templateUrl: '/templates/login.html'
-	});	
-	
+	});
+
 	$stateProvider.state('profile', {
 		url: '/profile',
 		controller: 'ProfileCtrl',
 		templateUrl: '/templates/profile.html'
-	});		
-	
+	});
+
 });
