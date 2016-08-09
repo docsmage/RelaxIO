@@ -1,4 +1,5 @@
 relaxIO.factory("Session", function () {
+	
 	var sessionInfo = null;
 	
 	return {
@@ -17,6 +18,10 @@ relaxIO.factory("Session", function () {
 		
 		getUserId: function () {
 			return sessionInfo && sessionInfo.uid;
+		},
+		
+		reloadSession: function () {
+			
 		}
 		
 	};

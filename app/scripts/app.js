@@ -1,5 +1,16 @@
 var relaxIO = angular.module("relaxIO", ["ui.router", "firebase",  "ui.bootstrap", "ngCookies", "firebase"])
 
+.run(
+	function($firebaseAuth, $rootScope, Session) {
+		
+		if (Session.hasSessionInfo()) {
+			$rootScope.isLoggedIn = true;
+		} else {
+			$rootScope.isLoggedIn = false;
+		}
+	}
+)
+
 // config states & controllers
 .config(function($stateProvider, $locationProvider, $urlRouterProvider) {
 

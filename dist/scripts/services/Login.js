@@ -1,26 +1,29 @@
-relaxIO.factory('Login', ['$firebaseArray', 'Session', function($firebaseArray, Session){
-	
-	var ref = new Firebase("https://relaxio.firebaseio.com");
+relaxIO.factory('Login', ['$firebaseArray', 'Session', '$firebaseAuth', '$q', function($firebaseArray, Session, $firebaseAuth, $q){
+									
+	// var ref = new Firebase("https://relaxio.firebaseio.com");
 	var onLogin = [];
-	
+  var auth = $firebaseAuth();
+							
 	return {
-		logIn: function (email, password, callback) {
-			ref.authWithPassword({
-				email: email,
-				password: password
-			}, function (error, authData) {
-				if (error) {
-					alert("Incorrect login info - please try again");
-				} else {				
+		logIn: function (email, password) {
+			
+			var deferred = $q.defer();
+			
+			auth.$signInWithEmailAndPassword(email, password).then(
+				function (authData) {
 					Session.setSessionInfo(authData);
-					callback();
-					
-					for (var i = 0; i < onLogin.length; i++) {
-						onLogin[i]();
+					deferred.resolve();
 					}
+				).catch(
+				function (error) {
+					alert("Login failed!" + error);
+					deferred.reject();
 				}
-			})
+			)
+		return deferred.promise;
+		
 		},
+		
 		onLogin: function (callback) {
 			if (Session.hasSessionInfo()) {
 				callback();
@@ -28,6 +31,6 @@ relaxIO.factory('Login', ['$firebaseArray', 'Session', function($firebaseArray, 
 				onLogin.push(callback);
 			}
 		}
+		}
 
-	}
 }]);
