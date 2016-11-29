@@ -49,20 +49,22 @@
 
 	<!-- controllers -->
 	<script src="/scripts/controllers/MainCtrl.js"></script>
-	<script src="/scripts/controllers/SignUpCtrl.js"></script>
-	<script src="/scripts/controllers/LogInCtrl.js"></script>
+<!--	<script src="/scripts/controllers/SignUpCtrl.js"></script>-->
+<!--	<script src="/scripts/controllers/LogInCtrl.js"></script>-->
 	<script src="/scripts/controllers/NavCtrl.js"></script>
-	<script src="/scripts/controllers/ProfileCtrl.js"></script>
+<!--	<script src="/scripts/controllers/ProfileCtrl.js"></script>-->
 
 	<!-- services -->
 	<script src="/scripts/services/Sounds.js"></script>
 	<script src="/scripts/services/SoundService.js"></script>
+<!--
 	<script src="/scripts/services/Signup.js"></script>
 	<script src="/scripts/services/Login.js"></script>
 	<script src="/scripts/services/LogOut.js"></script>
 	<script src="/scripts/services/SaveMix.js"></script>
 	<script src="/scripts/services/Session.js"></script>
 	<script src="/scripts/services/DeleteMix.js"></script>
+-->
 
 	<!-- directives -->
 	<script src="/scripts/directives/slider.js"></script>
@@ -70,14 +72,15 @@
 	<!-- Angular UI Bootstrap -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
 	<!-- Angular Cookies -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.24/angular-cookies.min.js"></script>
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.24/angular-cookies.min.js"></script>-->
 	<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>
+<!--	<script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>-->
 	<!-- AngularFire -->
-	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.js"></script>
+<!--	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.js"></script>-->
 	<!-- Set Local Storage -->
-	<script src="bower_components/js/angular-local-storage.min.js"></script>
+<!--	<script src="bower_components/js/angular-local-storage.min.js"></script>-->
 	
+<!--
   <script>
   // Initialize the Firebase SDK
   var config = {
@@ -88,6 +91,7 @@
   };
   firebase.initializeApp(config);
 </script>
+-->
 </head>
 <body id="background" class="container">
 
@@ -108,14 +112,15 @@
 		</div>
 
 			<!-- Save Button -->
-			<img src="/assets/images/Save-Icon.png" alt="Save Button" id="savebutton" ng-click="saveModal()">
+<!--			<img src="/assets/images/Save-Icon.png" alt="Save Button" id="savebutton" ng-click="saveModal()">-->
 
 	</div>
 
 		<!-- Navbar links -->
-		<span id="savedlogin">
+<!--		<span id="savedlogin">-->
 
 		<!-- Saved Menu -->
+<!--
 		<div class="dropdown" ng-show="isLoggedIn()">
 				<button type="button" class="saved dropdown-toggle" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
 				<ul id="navDropdown" class="dropdown-menu">
@@ -123,13 +128,16 @@
 					<li><a ui-sref="profile">Profile</a></li>
 				</ul>
 			</div>
+-->
 
 		<!-- Login/Out Buttons -->
+<!--
 		<button type="button" ng-hide="isLoggedIn()" id="loginout"><a ui-sref="login">Login</a></button>
 
 		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
 
 	</span>
+-->
 
 		<!-- Title img -->
 		<span id="titleimage"><a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="titleimg"></a></span>
