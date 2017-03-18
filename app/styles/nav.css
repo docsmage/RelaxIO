@@ -1,4 +1,5 @@
 /*Top navbar*/
+/*
 
 .navbartop {
 	background-color: #FFF;
@@ -7,29 +8,16 @@
 	padding: 10px;
 	margin-bottom: 20px;
 }
+*/
 
-/*LEFT- play/pause/volume & save*/
-#masterplaypause {
-	float: left;
-}
-
-#mastervolume {
-	margin-top: 8px;
-	margin-left: 50px;
-	margin-right: -50px;
-}
-
+/*
 #savebutton {
 	float: left;
 }
-
-/*CENTER- title img*/
-.titleimg {
-	height: 110px;
-	margin: 5px;
-}
+*/
 
 /*RIGHT- loginout & saved*/
+/*
 #savedlogin {
 	float: right;
 	margin: 32px;	
@@ -38,13 +26,15 @@
 #loginout {
 	margin-top: 10px;
 }
+*/
 
 /*Bottom navbar*/
 
+/*
 .navbarbottom {
 	background-color: #000;
 	opacity: 0.5;	
-/*	margin: 0 auto;*/
+	margin: 0 auto;
 	border-radius: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -57,17 +47,14 @@
 	padding-left: 30px;
 	padding-right: 30px;
 }
+*/
 
 /* Pop-up Stylings */
 
+/*
 .popup {
 	background-color: lightgrey;
 	padding: 30px;
 }
+*/
 
-/* Font */
-
-@font-face {
-font-family: 'Fontello';
-src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
-}

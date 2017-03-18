@@ -49,22 +49,11 @@
 
 	<!-- controllers -->
 	<script src="/scripts/controllers/MainCtrl.js"></script>
-<!--	<script src="/scripts/controllers/SignUpCtrl.js"></script>-->
-<!--	<script src="/scripts/controllers/LogInCtrl.js"></script>-->
 	<script src="/scripts/controllers/NavCtrl.js"></script>
-<!--	<script src="/scripts/controllers/ProfileCtrl.js"></script>-->
 
 	<!-- services -->
 	<script src="/scripts/services/Sounds.js"></script>
 	<script src="/scripts/services/SoundService.js"></script>
-<!--
-	<script src="/scripts/services/Signup.js"></script>
-	<script src="/scripts/services/Login.js"></script>
-	<script src="/scripts/services/LogOut.js"></script>
-	<script src="/scripts/services/SaveMix.js"></script>
-	<script src="/scripts/services/Session.js"></script>
-	<script src="/scripts/services/DeleteMix.js"></script>
--->
 
 	<!-- directives -->
 	<script src="/scripts/directives/slider.js"></script>
@@ -72,49 +61,30 @@
 	<!-- Angular UI Bootstrap -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
 	<!-- Angular Cookies -->
-<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.24/angular-cookies.min.js"></script>-->
-	<!-- Firebase -->
-<!--	<script src="https://www.gstatic.com/firebasejs/3.0.3/firebase.js"></script>-->
-	<!-- AngularFire -->
-<!--	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.js"></script>-->
-	<!-- Set Local Storage -->
-<!--	<script src="bower_components/js/angular-local-storage.min.js"></script>-->
-	
-<!--
-  <script>
-  // Initialize the Firebase SDK
-  var config = {
-    apiKey: "AIzaSyDrd75JiCUGC0RwENbcuT-O_6i7KcLAjQw",
-    authDomain: "relaxio.firebaseapp.com",
-    databaseURL: "https://relaxio.firebaseio.com",
-    storageBucket: "firebase-relaxio.appspot.com",
-  };
-  firebase.initializeApp(config);
-</script>
--->
+
 </head>
-<body id="background" class="container">
+<body id="background">
 
 <!--	Top Nav Bar -->
-	<nav class="navbartop" ng-controller="NavCtrl">
+	<nav class="jumbotron" ng-controller="NavCtrl">
 
 		<div id="topleft">
 
-		<div id="masterplaypause">
-
 			<!-- Master Play/Pause -->
+<!--
 			<span ng-click="toggleAll()">
 				<div ng-class="{'pause': isAnyPlaying(), 'play': !isAnyPlaying()}"></div>
 			</span>
+-->
 
 			<!-- Master Volume -->
+<!--
 			<slider data-sound="all" id="mastervolume"></slider>
 		</div>
+-->
 
 			<!-- Save Button -->
 <!--			<img src="/assets/images/Save-Icon.png" alt="Save Button" id="savebutton" ng-click="saveModal()">-->
-
-	</div>
 
 		<!-- Navbar links -->
 <!--		<span id="savedlogin">-->
@@ -140,13 +110,14 @@
 -->
 
 		<!-- Title img -->
-		<span id="titleimage"><a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="titleimg"></a></span>
+		<a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" id="headerimg"></a>
 
-	</nav>
+	</div>
 
 	<ui-view class="bodycontainer"></ui-view>
 
 <!--	Bottom Nav Bar -->
+<!--
 	<nav class="navbarbottom">
 
 		<a ui-sref="home" class="bottomnavicon">Home</a>
@@ -155,7 +126,10 @@
 		<a href="http://renee-cs.com/" target="_blank"  class="bottomnavicon">Connect</a>
 
 	</nav>
+-->
 
+	</nav>
+		
 	</body>
 
 </html>

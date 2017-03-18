@@ -1,19 +1,45 @@
 #background {
-
 background-color: lightsteelblue;
-	
+}
+
+/*
+.navbartop {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+*/
+
+#headerimg {
+	display: block;
+	margin: 0 auto;
+}
+
+#mastervolume {
+	margin-top: 8px;
+/*	margin-left: 50px;*/
+/*	margin-right: -50px;*/
+}
+
+.titleimg {
+	height: 110px;
+	margin: 5px;
+}
+
+@font-face {
+font-family: 'Fontello';
+src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /*Container for all pages*/
 
+/*
 .container {
-	padding-top: 20px;
 	margin: 0 auto;
 	position: absolute;
 	top: 0; left: 0; bottom: 0; right: 0;
-  text-align: center;	
-
+  text-align: center;
 }
+*/
 
 /* Grid system for sounds */
 
