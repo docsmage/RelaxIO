@@ -2,13 +2,6 @@
 background-color: lightsteelblue;
 }
 
-/*
-.navbartop {
-	padding: 10px;
-	margin-bottom: 20px;
-}
-*/
-
 #headerimg {
 	display: block;
 	margin: 0 auto;
@@ -32,14 +25,14 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /*Container for all pages*/
 
-/*
-.container {
+
+#templatecontainer {
 	margin: 0 auto;
 	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
+	top: 240px; left: 0; bottom: 0; right: 0;
   text-align: center;
 }
-*/
+
 
 /* Grid system for sounds */
 
@@ -80,9 +73,17 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /* Holds individual sound img, play/pause & volume */
 
+/*
 .bodycontainer {
 	display: block;
 	height: 10%;
+}
+*/
+
+#soundgrid {
+	height: 200px;
+	padding-top: 100px;
+	margin-top: 100px;
 }
 
 #soundandvolume {

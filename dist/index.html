@@ -83,38 +83,12 @@
 		</div>
 -->
 
-			<!-- Save Button -->
-<!--			<img src="/assets/images/Save-Icon.png" alt="Save Button" id="savebutton" ng-click="saveModal()">-->
-
-		<!-- Navbar links -->
-<!--		<span id="savedlogin">-->
-
-		<!-- Saved Menu -->
-<!--
-		<div class="dropdown" ng-show="isLoggedIn()">
-				<button type="button" class="saved dropdown-toggle" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Saved<span class="caret"></span></button>
-				<ul id="navDropdown" class="dropdown-menu">
-					<li ng-repeat="mix in mixes"><a ng-click="playMix(mix)">{{mix.name}}</a></li>
-					<li><a ui-sref="profile">Profile</a></li>
-				</ul>
-			</div>
--->
-
-		<!-- Login/Out Buttons -->
-<!--
-		<button type="button" ng-hide="isLoggedIn()" id="loginout"><a ui-sref="login">Login</a></button>
-
-		<button type="button" ng-click="logOut()" ng-show="isLoggedIn()">Logout</button>
-
-	</span>
--->
-
 		<!-- Title img -->
 		<a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" id="headerimg"></a>
 
 	</div>
 
-	<ui-view class="bodycontainer"></ui-view>
+	<ui-view id="templatecontainer"></ui-view>
 
 <!--	Bottom Nav Bar -->
 <!--
