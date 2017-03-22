@@ -65,29 +65,28 @@
 </head>
 <body id="background">
 
-<!--	Top Nav Bar -->
-	<nav class="jumbotron" ng-controller="NavCtrl">
-
-		<div id="topleft">
-
+<!--	Top Nav Bar -->	
+<div id="navbackground">
+	
+	<nav class="topnav" ng-controller="NavCtrl">
+	
+		<span id="masterplaypauseandvolume">
 			<!-- Master Play/Pause -->
-<!--
-			<span ng-click="toggleAll()">
-				<div ng-class="{'pause': isAnyPlaying(), 'play': !isAnyPlaying()}"></div>
-			</span>
--->
+			<div ng-click="toggleAll()">
+				<div ng-class="{'pause': isAnyPlaying(), 'play': !isAnyPlaying()}" id="masterplaypause"></div>
+			</div>
 
 			<!-- Master Volume -->
-<!--
 			<slider data-sound="all" id="mastervolume"></slider>
-		</div>
--->
+			</span>
 
 		<!-- Title img -->
-		<a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" id="headerimg"></a>
-
-	</div>
-
+		<a ui-sref="home"><img src="/assets/images/RelaxIO-Text-v5.png" alt="Relaxio logo" class="headerimg"></a>
+					
+	</nav>
+	
+</div>	
+	
 	<ui-view id="templatecontainer"></ui-view>
 
 <!--	Bottom Nav Bar -->
@@ -101,8 +100,6 @@
 
 	</nav>
 -->
-
-	</nav>
 		
 	</body>
 

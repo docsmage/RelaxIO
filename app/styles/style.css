@@ -2,20 +2,28 @@
 background-color: lightsteelblue;
 }
 
-#headerimg {
-	display: block;
+#navbackground {
+	height: 220px;
+	background-color: lightgray;
+}
+
+.topnav {
+	max-width: 450px;
 	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.headerimg {
+	float: right;
+}
+
+#masterplaypauseandvolume {
+	float: left;
 }
 
 #mastervolume {
-	margin-top: 8px;
-/*	margin-left: 50px;*/
-/*	margin-right: -50px;*/
-}
-
-.titleimg {
-	height: 110px;
-	margin: 5px;
+	max-width: 100px;
+	margin-top: 5px;
 }
 
 @font-face {
@@ -25,11 +33,10 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /*Container for all pages*/
 
-
 #templatecontainer {
 	margin: 0 auto;
 	position: absolute;
-	top: 240px; left: 0; bottom: 0; right: 0;
+	top: 260px; left: 0; bottom: 0; right: 0;
   text-align: center;
 }
 
@@ -46,23 +53,22 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /* Small screens & mobile */
 
-@media(max-width:39rem) {
-	 .column.fourth { width: 50%; }
+@media(max-width:40rem) {
+	#navbackground { height: 180px; }
+	#masterplaypauseandvolume { margin: 0 auto; float: none; }
+	#masterplaypause { margin-bottom: 5px; }
+	#mastervolume { margin: 0 auto; }
+	.headerimg { display: none; height: 0px; width: 0px; }
+	#templatecontainer { top: 200px; }
+	.column.fourth { width: 50%; }
 	
 }
 
-/* Medium screens */
+/* Medium/Large screens */
 
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
-
-	 
-	 .column.full { width: 100%; }
-	 .column.two-thirds { width: 66.7%; }
-	 .column.half { width: 50%; }
-	 .column.third { width: 33.3%; }
 	 .column.fourth { width: 25%; }
-	 .column.fifth { width: 20%; }	 
  }
 
 /*  Large screens (1024px) */
@@ -70,15 +76,6 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
  @media (min-width: 64rem) {
 	 html { font-size: 120%; }
  }
-
-/* Holds individual sound img, play/pause & volume */
-
-/*
-.bodycontainer {
-	display: block;
-	height: 10%;
-}
-*/
 
 #soundgrid {
 	height: 200px;
