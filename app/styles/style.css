@@ -1,10 +1,13 @@
 #background {
-background-color: lightsteelblue;
+background-color: lightskyblue;
+
 }
 
 #navbackground {
 	height: 220px;
-	background-color: lightgray;
+/*	background-color: darkgrey;*/
+	background-image: url("/assets/images/background/blue_circles.jpg");
+	background-size: cover;
 }
 
 .topnav {
@@ -23,7 +26,7 @@ background-color: lightsteelblue;
 
 #mastervolume {
 	max-width: 100px;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 @font-face {
@@ -32,47 +35,41 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /*Container for all pages*/
-
 #templatecontainer {
 	margin: 0 auto;
 	position: absolute;
 	top: 260px; left: 0; bottom: 0; right: 0;
   text-align: center;
+	max-width: 80%;
 }
 
-
 /* Grid system for sounds */
-
 .column {
 		 float: left;
 		 padding-left: 1rem;
 		 padding-right: 1rem;
 		 padding-top: 1rem;
-
 }
 
 /* Small screens & mobile */
-
 @media(max-width:40rem) {
 	#navbackground { height: 180px; }
+	.topnav { padding-top: 32px; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
 	#masterplaypause { margin-bottom: 5px; }
 	#mastervolume { margin: 0 auto; }
 	.headerimg { display: none; height: 0px; width: 0px; }
 	#templatecontainer { top: 200px; }
 	.column.fourth { width: 50%; }
-	
 }
 
 /* Medium/Large screens */
-
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
 	 .column.fourth { width: 25%; }
  }
 
 /*  Large screens (1024px) */
-
  @media (min-width: 64rem) {
 	 html { font-size: 120%; }
  }
@@ -88,7 +85,6 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /* Individual sound circles */
-
 .soundcircleoff {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -99,7 +95,6 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /* Sound circles lit up */
-
 .soundcirclelit {
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -112,8 +107,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 		0px 0px 5px 5px #fff inset;
 }
 
-/* Play & pause buttons */
-
+/* Play button */
 .play {
 	height: 100px;
 	width: 100px;
@@ -121,16 +115,15 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	margin: 0 auto;	
 }
 
+/* Pause button */
 .pause {
 	height: 100px;
 	width: 100px;
 	background-image: url("/assets/images/Pause-Icon.png");
-	margin: 0 auto;	
-	
+	margin: 0 auto;
 }
 
 /* Individual sound background images */
-
 #whitenoise {
 	background-image: url("/assets/images/White-Noise-Icon.png");
 }
@@ -160,11 +153,10 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 #om {
-	background-image: url("/assets/images/Om-Icon.png");	
+	background-image: url("/assets/images/Om-Icon.png");
 }
 
 /* Volume */
-
 .individualvolume {
 	display: block;
 	margin: 0 auto;
@@ -176,7 +168,6 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /* Seek Bar */
-
 .seek-bar {
 	height: 0.20rem;
 	position: relative;
@@ -188,7 +179,6 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	 background: #333;
 	 width: 100%;
 	 height: 0.25rem;
-	 
  }
  
  .seek-bar .thumb {
@@ -218,23 +208,33 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	 margin-left: -0.5rem;
  }
 
-/* Saved Mixes Page */
-
-.savedlist {
-	list-style-position: outside;
-	list-style-type: none;
-	text-align:justify;
-
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+	height: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+/*  background-color: darkgray;*/
+	background-image: url("/assets/images/background/blue_circles.jpg");
+	background-size: cover;
 }
 
-#savedmixlistdiv {
+/* Container for all icons in the footer */
+#footericons {
 	margin: 0 auto;
-	width: 25%;
-	
+	max-width: 105px;
+}
+
+/* Styles and placement for each individual icon */
+.footeritem {
+	height: 30px;
+	margin: 0 auto;
+	margin-right: 20px;
+	fill: black;
 }
 
 /* About page */
-
 #aboutpage {
 	margin: 0 auto;
 	text-align: center;
