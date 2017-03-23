@@ -1,16 +1,16 @@
 #background {
 background-color: lightskyblue;
-
 }
 
-#navbackground {
+#navbackground {	
 	height: 220px;
-/*	background-color: darkgrey;*/
 	background-image: url("/assets/images/background/blue_circles.jpg");
 	background-size: cover;
+	/* Alt bg color for if image fails to load */
+	background-color: deepskyblue;
 }
 
-.topnav {
+.topnav {	
 	max-width: 450px;
 	margin: 0 auto;
 	padding-top: 50px;
@@ -56,14 +56,16 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	#navbackground { height: 180px; }
 	.topnav { padding-top: 32px; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
-	#masterplaypause { margin-bottom: 5px; }
 	#mastervolume { margin: 0 auto; }
 	.headerimg { display: none; height: 0px; width: 0px; }
 	#templatecontainer { top: 200px; }
 	.column.fourth { width: 50%; }
+	/* The rules below aren't applying! Figure out why */
+	#footericons { max-width: 300px; }
+	#relaxioinfooter { display: inline; height: 30px; margin-right: 20px; }
 }
 
-/* Medium/Large screens */
+/* Medium screens */
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
 	 .column.fourth { width: 25%; }
@@ -231,7 +233,12 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	height: 30px;
 	margin: 0 auto;
 	margin-right: 20px;
+	margin-bottom: -13px;
 	fill: black;
+}
+
+#relaxioinfooter {
+	display: none;
 }
 
 /* About page */
@@ -239,10 +246,5 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	margin: 0 auto;
 	text-align: center;
 	width: 70%;
-	font-size: 120%;
-}
-
-.contacticon {
-	margin: 10px;
 	font-size: 120%;
 }
