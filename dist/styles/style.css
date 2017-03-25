@@ -38,7 +38,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 .templatecontainer {
 	margin: 0 auto;
 	position: absolute;
-	top: 260px; left: 0; bottom: 0; right: 0;
+	top: 240px; left: 0; bottom: 0; right: 0;
   text-align: center;
 	max-width: 80%;
 }
@@ -55,14 +55,12 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 @media(max-width:40rem) {
 	#navbackground { height: 180px; }
 	.topnav { padding-top: 32px; }
+	.templatecontainer { top: 200px; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
 	#masterplaypause { margin-bottom: 10px; }
 	#mastervolume { margin: 0 auto; }
 	.headerimg { display: none; height: 0px; width: 0px; }
-	#templatecontainer { top: 200px; }
 	.column.fourth { width: 50%; }
-	/* The rules below aren't applying! Figure out why */
-	#footericons { max-width: 300px; }
 }
 
 /* Medium screens */
@@ -223,7 +221,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 /* Container for all icons in the footer */
 #footericons {
 	margin: 0 auto;
-	max-width: 220px;
+	max-width: 200px;
 }
 
 /* Styles and placement for each individual icon */
