@@ -35,7 +35,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /*Container for all pages*/
-#templatecontainer {
+.templatecontainer {
 	margin: 0 auto;
 	position: absolute;
 	top: 260px; left: 0; bottom: 0; right: 0;
@@ -241,6 +241,6 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 #aboutpage {
 	margin: 0 auto;
 	text-align: center;
-	width: 70%;
-	font-size: 120%;
+	top: 220px;
+	font-size: 130%;
 }
