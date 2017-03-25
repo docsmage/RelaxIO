@@ -3,7 +3,7 @@ background-color: lightskyblue;
 }
 
 #navbackground {	
-	height: 220px;
+	height: 210px;
 	background-image: url("/assets/images/background/blue_circles.jpg");
 	background-size: cover;
 	/* Alt bg color for if image fails to load */
@@ -56,13 +56,13 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	#navbackground { height: 180px; }
 	.topnav { padding-top: 32px; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
+	#masterplaypause { margin-bottom: 10px; }
 	#mastervolume { margin: 0 auto; }
 	.headerimg { display: none; height: 0px; width: 0px; }
 	#templatecontainer { top: 200px; }
 	.column.fourth { width: 50%; }
 	/* The rules below aren't applying! Figure out why */
 	#footericons { max-width: 300px; }
-	#relaxioinfooter { display: inline; height: 30px; margin-right: 20px; }
 }
 
 /* Medium screens */
@@ -214,10 +214,8 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
   position: fixed;
   bottom: 0;
   width: 100%;
-	height: auto;
 	padding-top: 30px;
 	padding-bottom: 30px;
-/*  background-color: darkgray;*/
 	background-image: url("/assets/images/background/blue_circles.jpg");
 	background-size: cover;
 }
@@ -225,7 +223,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 /* Container for all icons in the footer */
 #footericons {
 	margin: 0 auto;
-	max-width: 105px;
+	max-width: 220px;
 }
 
 /* Styles and placement for each individual icon */
@@ -237,9 +235,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	fill: black;
 }
 
-#relaxioinfooter {
-	display: none;
-}
+/*#relaxioinfooter { display: inline; height: 30px; margin-right: 20px; }*/
 
 /* About page */
 #aboutpage {
