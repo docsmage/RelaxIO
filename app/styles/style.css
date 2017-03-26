@@ -10,6 +10,7 @@ background-color: #7FB7EA;
 
 #navbackground {	
 	height: 30%;
+	min-height: 220px;
 	background-image: url("/assets/images/background/blue_circles.jpg");
 	background-size: cover;
 	/* Alt bg color for if image fails to load */
@@ -48,6 +49,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	display: block;
 	clear: both;
 	height: 58%;
+	min-height: 350px;
 }
 
 /* Grid system for sounds */
@@ -60,9 +62,9 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /* Small screens & mobile */
 @media(max-width:40rem) {
-	#navbackground { height: 30% }
+	#navbackground { height: 30%; min-height: 220px; }
 	.topnav { padding-top: 32px; }
-	.templatecontainer { top: 200px; height: 82%; }
+	.templatecontainer { top: 200px; height: 82%; min-height: 600px; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
 	#masterplaypause { margin-bottom: 10px; }
 	#mastervolume { margin: 0 auto; margin-bottom: 5px;}
@@ -223,6 +225,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
   bottom: 0;
   width: 100%;
 	height: 12%;
+	min-height: 90px;
 	background-image: url("/assets/images/background/blue_circles.jpg");
 	background-size: cover;
 }
