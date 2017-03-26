@@ -1,9 +1,15 @@
+html, body { 
+	height: 100%; 
+	width: 100%; 
+	margin: 0 auto;
+}
+
 #background {
 background-color: lightskyblue;
 }
 
 #navbackground {	
-	height: 210px;
+	height: 30%;
 	background-image: url("/assets/images/background/blue_circles.jpg");
 	background-size: cover;
 	/* Alt bg color for if image fails to load */
@@ -37,10 +43,11 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 /*Container for all pages*/
 .templatecontainer {
 	margin: 0 auto;
-	position: absolute;
-	top: 240px; left: 0; bottom: 0; right: 0;
-  text-align: center;
+	padding-top: 30px;
 	max-width: 80%;
+	display: block;
+	clear: both;
+	height: 58%;
 }
 
 /* Grid system for sounds */
@@ -53,9 +60,9 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /* Small screens & mobile */
 @media(max-width:40rem) {
-	#navbackground { height: 180px; }
+	#navbackground { height: 25% }
 	.topnav { padding-top: 32px; }
-	.templatecontainer { top: 200px; }
+	.templatecontainer { top: 200px; height: 82%; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
 	#masterplaypause { margin-bottom: 10px; }
 	#mastervolume { margin: 0 auto; }
@@ -209,11 +216,10 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
  }
 
 .footer {
-  position: fixed;
+/*  position: fixed;*/
   bottom: 0;
   width: 100%;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	height: 12%;
 	background-image: url("/assets/images/background/blue_circles.jpg");
 	background-size: cover;
 }
@@ -222,6 +228,8 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 #footericons {
 	margin: 0 auto;
 	max-width: 200px;
+	padding-top: 30px;
+	padding-bottom: 30px;	
 }
 
 /* Styles and placement for each individual icon */
