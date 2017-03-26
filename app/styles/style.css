@@ -60,12 +60,13 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /* Small screens & mobile */
 @media(max-width:40rem) {
-	#navbackground { height: 25% }
+	#navbackground { height: 30% }
 	.topnav { padding-top: 32px; }
 	.templatecontainer { top: 200px; height: 82%; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
 	#masterplaypause { margin-bottom: 10px; }
-	#mastervolume { margin: 0 auto; }
+	#mastervolume { margin: 0 auto; margin-bottom: 5px;}
+	#smallrelaxio {display: block; margin: 0 auto; text-align: center; padding: 15px;}	
 	.headerimg { display: none; height: 0px; width: 0px; }
 	.column.fourth { width: 50%; }
 }
@@ -74,11 +75,13 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
  @media (min-width: 40rem) {
 	 html { font-size: 112%; }
 	 .column.fourth { width: 25%; }
+	 #smallrelaxio {display: none;}
  }
 
 /*  Large screens (1024px) */
  @media (min-width: 64rem) {
 	 html { font-size: 120%; }
+	 #smallrelaxio {display: none;}
  }
 
 #soundgrid {
@@ -227,7 +230,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 /* Container for all icons in the footer */
 #footericons {
 	margin: 0 auto;
-	max-width: 200px;
+	max-width: 146px;
 	padding-top: 30px;
 	padding-bottom: 30px;	
 }
@@ -246,7 +249,8 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 /* About page */
 #aboutpage {
 	margin: 0 auto;
-	text-align: center;
+/*	text-align: center;*/
+	padding-right: 25px;
 	top: 220px;
 	font-size: 130%;
 }
