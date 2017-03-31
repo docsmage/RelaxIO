@@ -233,7 +233,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 /* Container for all icons in the footer */
 #footericons {
 	margin: 0 auto;
-	max-width: 146px;
+	max-width: 200px;
 	padding-top: 30px;
 	padding-bottom: 30px;	
 }
