@@ -274,9 +274,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 
 /* About page */
 #aboutpage {
-	margin: 0 auto;
-/*	text-align: center;*/
-	padding-right: 25px;
-	top: 220px;
-	font-size: 130%;
+	font-size: 180%;
+	margin-top: 60px;
+	text-align: center;
 }
