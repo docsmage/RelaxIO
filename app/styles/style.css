@@ -57,7 +57,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /* Small screens & mobile */
-@media(max-width:40rem) {
+@media (max-width: 600px) {
 	#navbackground { height: 26%; min-height: 220px; }
 	.topnav { padding-top: 32px; }
 	.templatecontainer { margin: 0 auto; }
@@ -70,14 +70,14 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /* Medium screens */
- @media (min-width: 40rem) {
+ @media (min-width: 601px) {
 	 html { font-size: 112%; }
 	 .column.fourth { width: 25%; }
 	 #smallrelaxio {display: none;}
  }
 
 /*  Large screens (1024px) */
- @media (min-width: 64rem) {
+ @media (min-width: 1024px) {
 	 html { font-size: 120%; }
 	 #smallrelaxio {display: none;}
  }
