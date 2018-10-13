@@ -1,7 +1,7 @@
-html, body { 
-	height: 100%; 
+html, body {
+	height: 100%;
 	min-height: 100%;
-	width: 100%; 
+	width: 100%;
 	margin: 0 auto;
 }
 
@@ -9,16 +9,12 @@ html, body {
 background-color: #7FB7EA;
 }
 
-#navbackground {	
+#navbackground {
 	height: 25%;
 	min-height: 220px;
-	background-image: url("/assets/images/background/blue_circles.jpg");
-	background-size: cover;
-	/* Alt bg color for if image fails to load */
-	background-color: deepskyblue;
 }
 
-.topnav {	
+.topnav {
 	max-width: 450px;
 	margin: 0 auto;
 	padding-top: 50px;
@@ -49,7 +45,6 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	max-width: 80%;
 	display: block;
 	clear: both;
-	height: 64%;
 	min-height: 350px;
 }
 
@@ -62,27 +57,27 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 /* Small screens & mobile */
-@media(max-width:40rem) {
+@media (max-width: 600px) {
 	#navbackground { height: 26%; min-height: 220px; }
 	.topnav { padding-top: 32px; }
-	.templatecontainer { position: absolute; width: 600px; margin: 0 auto; left: 0; right: 0; margin-bottom: 155px; min-height: 860px; }
+	.templatecontainer { margin: 0 auto; }
 	#masterplaypauseandvolume { margin: 0 auto; float: none; }
 	#masterplaypause { margin-bottom: 10px; }
 	#mastervolume { margin: 0 auto; margin-bottom: 5px;}
-	#smallrelaxio {display: block; margin: 0 auto; text-align: center; padding: 15px;}	
+	#smallrelaxio {display: block; margin: 0 auto; text-align: center; padding: 15px;}
 	.headerimg { display: none; height: 0px; width: 0px; }
 	.column.fourth { width: 50%; }
 }
 
 /* Medium screens */
- @media (min-width: 40rem) {
+ @media (min-width: 601px) {
 	 html { font-size: 112%; }
 	 .column.fourth { width: 25%; }
 	 #smallrelaxio {display: none;}
  }
 
 /*  Large screens (1024px) */
- @media (min-width: 64rem) {
+ @media (min-width: 1024px) {
 	 html { font-size: 120%; }
 	 #smallrelaxio {display: none;}
  }
@@ -114,8 +109,8 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	border-radius: 50%;
 	width: 100px;
 	height: 100px;
-	margin: 0 auto;	
-	
+	margin: 0 auto;
+
 	box-shadow: 0px 0px 20px 8px #fff,
 		0px 0px 5px 5px #fff inset;
 }
@@ -125,7 +120,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	height: 100px;
 	width: 100px;
 	background-image: url("/assets/images/Play-Icon.png");
-	margin: 0 auto;	
+	margin: 0 auto;
 }
 
 /* Pause button */
@@ -158,11 +153,11 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 }
 
 #thunderstorm {
-	background-image: url("/assets/images/soundicons/Storm.png");	
+	background-image: url("/assets/images/soundicons/Storm.png");
 }
 
 #birdsong {
-	background-image: url("/assets/images/soundicons/Singing-Birds.png");	
+	background-image: url("/assets/images/soundicons/Singing-Birds.png");
 }
 
 #om {
@@ -203,15 +198,15 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	cursor: pointer;
 	background-color: #434343;
  }
- 
+
  .seek-bar .fill {
 	 background: #333;
 	 width: 100%;
 	 height: 0.35rem;
  }
- 
+
  .seek-bar .thumb {
-	 background-color: #434343;	 
+	 background-color: #434343;
 	 position: absolute;
 	 height: 1.2rem;
 	 width: 1.2rem;
@@ -223,7 +218,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	 margin-top: -0.60rem;
 	 border-radius: 50%;
 	 cursor: pointer;
-/*	 
+/*
 	 transition: width 120ms ease-in-out;
 		 height 120ms ease-in-out,
 		 margin 120ms ease-in-out,
@@ -233,10 +228,10 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 */
 		 ;
  }
- 
+
 /*
  .seek-bar:hover .thumb {
-	 background-color: #434343;	 
+	 background-color: #434343;
 	 width: 1.2rem;
 	 height: 1.2rem;
 	 margin: -0.7rem;
@@ -245,13 +240,9 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 */
 
 .footer {
-  position: fixed;
-  bottom: 0;
+	clear: both;
+	margin-top: 4rem;
   width: 100%;
-	height: 11%;
-	min-height: 90px;
-	background-image: url("/assets/images/background/blue_circles.jpg");
-	background-size: cover;
 }
 
 /* Container for all icons in the footer */
@@ -259,7 +250,7 @@ src: url('/assets/fonts/fontello/font/fontello.ttf') format('truetype');
 	margin: 0 auto;
 	max-width: 200px;
 	padding-top: 30px;
-	padding-bottom: 30px;	
+	padding-bottom: 30px;
 }
 
 /* Styles and placement for each individual icon */
