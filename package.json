@@ -24,6 +24,7 @@
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-hapi": "^0.8.1"
+    "grunt-hapi": "^0.8.1",
+    "hapi": ">=11.1.3"
   }
 }
